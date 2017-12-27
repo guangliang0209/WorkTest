@@ -6,87 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59241a67-8427-45cc-b0d7-6170d492950d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/CommonUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/MatcherSql.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/annotation/EnumTest$TrafficLamp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/annotation/EnumTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/annotation/MyAnnotation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/annotation/MyReflection.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/annotation/MyTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/annotation/TestAnnotation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/abst/product/Human.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/abst/product/Man.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/method/fact/BenzDriver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/method/fact/BmwDriver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/method/fact/Driver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/method/product/Benz.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/method/product/Bmw.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/method/product/Car.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/simple/fact/Driver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/simple/product/Benz.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/simple/product/Bmw.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/factory/simple/product/Car.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/gexin/AppPush.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/mail/Mail$Email_Autherticator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/mail/Mail.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/mail/MailFactory$Inner.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/mail/MailFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/mail/MailTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/rabbitmq/Consumer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/rabbitmq/Producer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/reflact/Apple.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/reflact/Factory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/reflact/Orange.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/reflact/TestReflact.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/reflact/fruit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/thread/ScheduleJob.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/thread/ScheduledThreadPool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/WechatSDK.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/AccessToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/FileMessage$File.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/FileMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/Group.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/ImageMessage$Image.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/ImageMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/Message.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/MpNewsMessage$Article.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/MpNewsMessage$Articles.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/MpNewsMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/NewsMessage$Article.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/NewsMessage$Articles.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/NewsMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/Person.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/Tag.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/TextMessage$Content.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/TextMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/VideoMessage$Video.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/VideoMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/VoiceMessage$Voice.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/model/VoiceMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/Contacts.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/ContactsGroupService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/ContactsPersonService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/ContactsTagService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/SendWechatMsgService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/TokenService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/impl/ContactsGroupServiceImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/impl/ContactsGroupServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/impl/ContactsPersonServiceImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/impl/ContactsPersonServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/impl/ContactsTagServiceImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/impl/ContactsTagServiceImpl$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/impl/ContactsTagServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/impl/SendWechatMsgServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/service/impl/TokenServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/wechat/util/CommonUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/work/WorkTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/work/auth.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/test/work/tag-define.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/test/JobTest$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/test/JobTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CommonUtils.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/work/WorkTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/work/auth.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/work/tag-define.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test.iws" />
@@ -118,11 +40,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JobTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JobTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/JobTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
               <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatcherSql.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MatcherSql.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -272,20 +204,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
@@ -963,8 +881,16 @@
       <workItem from="1513754246205" duration="303000" />
       <workItem from="1513934627166" duration="798000" />
       <workItem from="1514345743459" duration="651000" />
-      <workItem from="1514346746274" duration="284000" />
+      <workItem from="1514346746274" duration="375000" />
     </task>
+    <task id="LOCAL-00001" summary="delete unused files">
+      <created>1514347059827</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1514347059827</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1000,7 +926,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241743000" />
+    <option name="totallyTimeSpent" value="241834000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1021,7 +947,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31751227" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31751227" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33660132" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
@@ -1061,6 +987,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="delete unused files" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete unused files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1151,13 +1081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/work/WorkTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1341,13 +1264,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MatcherSql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/thread/ScheduledThreadPool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
@@ -1376,24 +1292,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/work/tag-define.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="207" column="42" lean-forward="false" selection-start-line="207" selection-start-column="42" selection-end-line="207" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/work/auth.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="157" column="4" lean-forward="false" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1423,6 +1325,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/work/auth.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="157" column="4" lean-forward="false" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/work/tag-define.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="207" column="42" lean-forward="false" selection-start-line="207" selection-start-column="42" selection-end-line="207" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/work/WorkTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MatcherSql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding />
         </state>
       </provider>
