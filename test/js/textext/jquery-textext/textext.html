@@ -1,0 +1,30 @@
+<link type="text/css" rel="stylesheet" href="./jquery-textext-master/src/css/textext.core.css">
+<link type="text/css" rel="stylesheet" href="./jquery-textext-master/src/css/textext.plugin.tags.css">
+<link type="text/css" rel="stylesheet" href="./jquery-textext-master/src/css/textext.plugin.arrow.css">
+<link type="text/css" rel="stylesheet" href="./jquery-textext-master/src/css/textext.plugin.prompt.css">
+<link type="text/css" rel="stylesheet" href="./jquery-textext-master/src/css/textext.plugin.autocomplete.css">
+<textarea  id="textarea" type="text" placeholder="" style="width: 450px;height: 30px;overflow: auto; padding-left: 5px; padding-top: 3px;">
+    </textarea>
+
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript" src="./jquery-textext-master/src/js/textext.core.js"></script>
+<script type="text/javascript" src="./jquery-textext-master/src/js/textext.plugin.autocomplete.js"></script>
+<script type="text/javascript" src="./jquery-textext-master/src/js/textext.plugin.arrow.js"></script>
+<script type="text/javascript" src="./jquery-textext-master/src/js/textext.plugin.autocomplete.js"></script>
+<script type="text/javascript" src="./jquery-textext-master/src/js/textext.plugin.focus.js"></script>
+<script type="text/javascript" src="./jquery-textext-master/src/js/textext.plugin.prompt.js"></script>
+<script type="text/javascript" src="./jquery-textext-master/src/js/textext.plugin.tags.js"></script>
+<script>
+    var arr = ['Basic', 'JavaScript', 'PHP', 'Scala','feng'];
+    $('#textarea').textext({
+        plugins: 'tags prompt focus autocomplete arrow',
+        tagsItems: arr,
+        prompt: 'Add one...',
+        ajax: {
+            url: '/manual/examples/data.json',
+            dataType: 'json',
+            cacheResults: true
+        }
+    });
+
+</script>

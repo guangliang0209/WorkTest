@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tagDefines>
+    <tagTypes>
+        <tagType id="1" name="布局"/>
+        <tagType id="2" name="基本控件"/>
+        <tagType id="3" name="综合控件"/>
+    </tagTypes>
+    <tagDefine>
+
+        <tag name="page" iconClass="tag-page"></tag>
+        <tag name="MobilePage" type="1"/>
+        <!--布局控件 -->
+        <tag name="container" type="1" iconClass="tag-container"/>
+        <tag name="row" type="1" iconClass="tag-row"/>
+        <tag name="col" type="1" iconClass="tag-col">
+            <attr name="span" des="跨列宽度" default="6" required="true" dataType="int" minValue="1" maxValue="12"/>
+            <attr name="title" des="标题"/>
+            <attr name="style" des="style"/>
+        </tag>
+        <!--暂未实现 <tag name="repeateArea" type="1"> <attr name="sql" required="true" des="完整的SQL, 每一次重复的不同field请用数组下标访问" /> <attr name="emptyMsg" des="没有数据时的提示信息" /> </tag> -->
+        <tag name="conditionSql">
+            <attr name="fromSql" des="查询语句，不包括from本身" required="true"/>
+            <attr name="fieldName" des="查询字段名" required="true"/>
+            <attr name="compVal" des="比较的值" required="true"/>
+            <attr name="type" default="equal" des="条件类型" dataType="select"
+                  values="['equal', 'contains', 'not-equal', 'grater', 'grater-equal', 'less', 'less-equal', 'null', 'not-null']"/>
+        </tag>
+        <tag name="elseIfConditionSql">
+            <attr name="fromSql" des="查询语句，不包括from本身" required="true"/>
+            <attr name="fieldName" des="查询字段名" required="true"/>
+            <attr name="compVal" des="比较的值" required="true"/>
+            <attr name="type" default="equal" des="条件类型" dataType="select"
+                  values="['equal', 'contains', 'not-equal', 'grater', 'grater-equal', 'less', 'less-equal', 'null', 'not-null']"/>
+        </tag>
+        <tag name="elseCondition"/>
+        <tag name="tabs" type="1">
+            <attr name="isBlue" dataType="select" default="true" values="[true, false]" des="是否蓝色背景"/>
+        </tag>
+        <tag name="tab" type="1">
+            <attr name="title" des="标题" required="true"/>
+            <!--<attr name="closeable" default="false" required="true" dataType="select" values="[false, true]" des="是否允许关闭" /> -->
+        </tag>
+        <tag name="dynamicTabs" type="1" idRequired="true">
+            <attr name="model" des="目标数据库" required="true" dataType="modelSelect"/>
+            <attr name="textField" des="文本字段名" required="true"/>
+            <attr name="where" des="条件限制语句(不包括where)"/>
+            <attr name="href" dataType="pageList" des="节点链接页面"/>
+            <attr name="isBlue" dataType="select" default="true" values="[true, false]" des="是否蓝色背景"/>
+        </tag>
+        <tag name="switherSelector" type="1" idRequired="true">
+            <attr name="label" des="文字标题"/>
+            <attr name="model" des="目标数据库" required="true" dataType="modelSelect"/>
+            <attr name="textField" des="文本字段名" required="true"/>
+            <attr name="where" des="条件限制语句(不包括where)"/>
+            <attr name="href" dataType="pageList" des="节点链接页面"/>
+            <attr name="style" des="css设置"/>
+        </tag>
+        <tag name="dynamicForm" type="1" idRequired="true">
+            <attr name="formType" default="view" required="true" dataType="select"
+                  values="['view', 'add', 'edit', 'preview']" des="表单类型"/>
+            <attr name="formIdSql" des="查询表单ID的SQL"/>
+            <attr name="fillIdSql" des="查询填报ID的SQL"/>
+            <attr name="afterSql" des="操作完成后执行的SQL"/>
+            <!--<attr name="beforeCode" des="操作前执行的Service方法代码" /> <attr name="afterCode" des="操作后执行的Service方法代码" /> -->
+        </tag>
+        <!--基本控件 -->
+        <tag name="include" type="2">
+            <attr name="file" des="文件路径" required="true"/>
+        </tag>
+        <tag name="pageLinker" type="2" idRequired="true">
+            <attr name="APP_ID" des="页面所在的App" required="true"/>
+            <attr name="pageId" des="链接到的页面ID, 默认index"/>
+            <attr name="needAuth" dataType="select" default="true" values="[true, false]" des="是否需要鉴权"/>
+            <attr name="isIframe" dataType="select" default="false" values="[false, true]" des="是否以Iframe嵌入"/>
+            <attr name="frameWidth" des="iframe宽度"/>
+            <attr name="frameHeight" des="iframe高度"/>
+        </tag>
+        <tag name="shuttle" type="2" idRequired="true">
+            <attr name="destContext" des="要穿梭的目的服务器址Context, 非80需要加端口" required="true"/>
+            <attr name="APP_ID" des="页面所在的App" required="true"/>
+            <attr name="pageId" des="链接到的页面ID, 默认index"/>
+            <attr name="needAuth" dataType="select" default="true" values="[true, false]" des="是否需要鉴权"/>
+            <attr name="frameWidth" des="iframe宽度"/>
+            <attr name="frameHeight" des="iframe高度"/>
+        </tag>
+        <tag name="linker" type="2">
+            <attr name="href" required="true"/>
+            <attr name="text" required="true"/>
+            <attr name="target" dataType="select" default="_blank" values="['_blank', '_self']"/>
+        </tag>
+        <tag name="funButton" type="2" idRequired="true" clazz="rabbit.core.view.widget.base.funbtn.funButton.beetl">
+            <attr name="label" required="true" des="按钮文字"/>
+            <attr name="funName" required="true" des="被调用的service方法"/>
+            <attr name="glyphicon" des="glyphicon图标"/>
+            <attr name="icon" des="icon图片"/>
+            <attr name="confirm" des="确认信息"/>
+            <attr name="params" des="传入的参数(JSON格式, 不写{}"/>
+        </tag>
+        <tag name="fileDownloadButton" type="2" idRequired="true">
+            <attr name="label" required="true" des="按钮文字"/>
+            <attr name="serviceMethod" required="true" des="被调用的service方法"/>
+            <attr name="glyphicon" des="glyphicon图标"/>
+            <attr name="icon" des="icon图片"/>
+            <attr name="confirm" des="确认信息"/>
+        </tag>
+        <tag name="hr" type="2"/>
+        <!--<tag name="pieChart" type="2" idRequired="true"> <attr name="title" des="标题" required="true"/> <attr name="seriesX" des="x轴数组(sql:开头则从数据库中查询), 包括名和值json" required="true"/> <attr name="seriesY" des="y轴数据(sql:开头则从数据库中查询,[x]表示对应的x轴值" required="true"/> <attr name="seriesName" des="x轴数组(sql:开头则从数据库中查询), 包括名和值json" /> <attr name="params" des="传入的参数, 不写{}" /> </tag> <tag name="lineChart" type="2" idRequired="true"> <attr name="title" des="标题" required="true"/> <attr name="seriesX" des="x轴数组(sql:开头则从数据库中查询), 包括名和值json" required="true"/> <attr name="seriesY" des="y轴数据(sql:开头则从数据库中查询,[x]表示对应的x轴值" required="true"/> <attr name="seriesName" des="x轴数组(sql:开头则从数据库中查询), 包括名和值json" /> <attr name="params" des="传入的参数, 不写{}"
+            /> </tag> -->
+        <tag name="label" type="2">
+            <attr name="label" required="true" des="文字内容(sql:开关则远程查询, 查2个字段则第一个为label，第2个为hidden的value)"/>
+            <attr name="service"
+                  des="要调用的service方法，该方法需要返回string, 如果设置此值，则label的值由service返回的json决定,格式为{label:label, value: value}"/>
+            <attr name="remoteParams" des="远程查询时JSON参数传递, 不包括{}"/>
+            <attr name="value" des="值(hidden控件保存)"/>
+            <attr name="style" des="style"/>
+        </tag>
+        <tag name="text" type="2">
+            <attr name="label" des="文字"/>
+            <attr name="value" des="初始值"/>
+            <attr name="placeholder" des="填充文字"/>
+            <attr name="readOnly" default="false" required="true" dataType="select" values="[false, true]" des="是否只读"/>
+            <attr name="style" des="style"/>
+            <attr name="match" des="与另一字段关系"/>
+            <attr name="password" des="是否密码" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="editor" type="2" idRequired="true">
+            <attr name="rich" required="true" default="false" dataType="select" values="[false, true]" des="是否富文本"/>
+            <attr name="placeholder" des="初始填充文字"/>
+            <attr name="width" des="宽度"/>
+            <attr name="height" des="高度"/>
+        </tag>
+        <tag name="codeEditor" type="2" idRequired="true">
+            <attr name="theam" default="eclipse" dataType="select"
+                  values="['eclipse', 'github','monokai', 'ambiance', 'chaos', 'chrome', 'cloud', 'dawn']" des="主题选项"/>
+            <attr name="mode" des="语言选项" default="java" dataType="select"
+                  values="['text/x-java', 'text/javascript', 'text/html', 'application/xml', 'text/x-sql']"/>
+            <attr name="readOnly" required="true" default="false" dataType="select" values="[false, true]" des="是否只读"/>
+            <attr name="width" required="true" des="宽度" dataType="int"/>
+            <attr name="height" required="true" des="高度" dataType="int"/>
+        </tag>
+        <tag name="workflowReviserChoose" idRequired="true" type="2">
+            <attr name="isStartNode" required="true" default="true" dataType="select" values="[true, false]"
+                  des="是否为起始节点"/>
+            <attr name="initWhere" des="固定的查询条件"/>
+            <attr name="callBackObj" des="添加成功后触发指定对象的click事件"/>
+            <attr name="afterSql" des="操作完成后执行的SQL"/>
+            <attr name="beforeCode" des="操作前执行的Service方法代码"/>
+            <attr name="afterCode" des="操作后执行的Service方法代码"/>
+        </tag>
+        <tag name="currentUser" type="2"/>
+        <tag name="dateTime" type="2">
+            <attr name="label" des="文字"/>
+            <attr name="value" des="初始值"/>
+            <attr name="placeholder" des="填充文字"/>
+            <attr name="style" des="style"/>
+            <attr name="showTime" des="是否显示时间" required="true" default="false" dataType="select"
+                  values="[false, true]"/>
+        </tag>
+        <tag name="dbCheckbox" type="2" idRequired="true">
+            <attr name="sql" des="查询Sql，从from开始，不包括from" required="true"/>
+            <attr name="valueField" des="值字段名" required="true" default="id"/>
+            <attr name="textField" des="文本字段名" required="true"/>
+            <attr name="valueSql" des="查询选中值的sql, 完整版，仅包括一个字段"/>
+            <attr name="isView" des="是否仅查看" required="true" default="false" dataType="select" values="[false, true]"/>
+            <attr name="defaultCheckAll" des="是否默认全选" default="false" dataType="select" values="[false,true]"/>
+            <attr name="countPerRow" des="每行显示个数" default="1" required="true"/>
+        </tag>
+        <tag name="selects" type="2" idRequired="true"/>
+        <tag name="selectList">
+            <attr name="label" des="文字"/>
+            <attr name="style" des="style"/>
+            <attr name="valueField" des="值字段" default="id" required="true"/>
+            <attr name="textField" des="文字字段" required="true"/>
+            <attr name="keyField" des="主键字段" default="id" required="true"/>
+            <attr name="parentField" des="父关联字段"/>
+            <attr name="fromSql" des="从from开始(不包括from)的查询语句" required="true"/>
+        </tag>
+        <tag name="dbSelect" type="2" clazz="com.rabbit.core.view.tagservice.impl.DBSelect">
+            <attr name="label" des="文字"/>
+            <attr name="style" des="style"/>
+            <attr name="model" des="目标数据库" required="true" dataType="modelSelect"/>
+            <attr name="textField" des="文本字段名" required="true"/>
+            <attr name="textAsValue" des="将文字作为值" default="false" dataType="select" values="[false, true]"/>
+            <attr name="where" des="条件限制语句(不包括where)"/>
+            <attr name="addZero" des="是否自动添加无值选项" default="true" dataType="select" values="[true, false]"/>
+            <attr name="value" des="初始值， sql:开头则表示数据库查询"/>
+            <attr name="orderBy" des="排序依据"/>
+            <attr name="order" des="排序" dataType="select" default="asc" values="['asc', 'desc']"/>
+        </tag>
+        <tag name="dmDbSelect" type="2">
+            <attr name="label" des="文字"/>
+            <attr name="style" des="style"/>
+            <attr name="dmName" des="目标代码表" required="true"/>
+            <attr name="textAsValue" des="将文字作为值" default="false" dataType="select" values="[false, true]"/>
+            <attr name="where" des="条件限制语句(不包括where)"/>
+            <attr name="addZero" des="是否自动添加无值选项" default="true" dataType="select" values="[true, false]"/>
+            <attr name="value" des="初始值， sql:开头则表示数据库查询"/>
+        </tag>
+        <tag name="uploader" type="2" idRequired="true">
+            <attr name="exts" des="文件类型(空则代表所有类型)"/>
+            <attr name="multy" required="true" default="false" des="是否允许多选(HTML5有效, 且多选时不支持同一表单中的多个file)"
+                  dataType="select" values="[false, true]"/>
+            <attr name="limit" required="true" default="10" dataType="int" des="文件上传大小限制(M为单位)"/>
+        </tag>
+        <tag name="img" type="2">
+            <attr name="src" des="相对路径"/>
+            <attr name="alt" des="alt属性"/>
+            <attr name="style" des="style"/>
+        </tag>
+        <tag name="imgSlider" type="2" idRequired="true"/>
+        <tag name="filedownload" type="2">
+            <attr name="src" des="相对路径"/>
+            <attr name="filename" des="文件名"/>
+        </tag>
+        <tag name="servSelect" type="2">
+            <attr name="service" des="调用的方法名, 返回List《JSONObject》结构" required="true"/>
+            <attr name="label" des="文字"/>
+            <attr name="style" des="style"/>
+            <attr name="showAsRadio" des="是否显示成radio" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="select" type="2">
+            <attr name="addNull" des="是否添加空值" required="true" default="false" dataType="select" values="[false, true]"/>
+            <attr name="label" des="文字"/>
+            <attr name="style" des="style"/>
+            <attr name="showAsRadio" des="是否显示成radio" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="option" noconditionSql="true">
+            <attr name="text" required="true" des="文字"/>
+            <attr name="value" required="true" des="值"/>
+        </tag>
+        <tag name="dataSel" type="2" idRequired="true">
+            <attr name="fromSql" des="查询SQL(不包括from, 可包括where)"/>
+            <!--<attr name="idField" required="true" des="ID字段名称" default="id" /> -->
+            <attr name="textField" required="true" des="文字域"/>
+            <!--<attr name="showPosition" required="true" default="popup" des="显示方式" dataType="select" values="['popup', 'direct']"/> -->
+            <attr name="title" des="标题"/>
+        </tag>
+        <tag name="m2mDataView" idRequired="true">
+            <attr name="fromSql" des="查询SQL(不包括from, 可包括where)" required="true"/>
+            <attr name="textField" required="true" des="文字域"/>
+        </tag>
+        <tag name="singleTreeNodePath" type="2" idRequired="true">
+            <attr name="tableName" required="true" des="所在表名"/>
+            <attr name="textFieldName" required="true" des="显示的文本字段"/>
+            <attr name="parentFieldName" required="true" des="父字段名"/>
+            <attr name="where" des="查询的where条件(不含where单词)"/>
+            <attr name="style" des="style"/>
+        </tag>
+        <tag name="selfInfTree" type="2" idRequired="true">
+            <attr name="tableName" des="所在表名"/>
+            <attr name="rootName" des="根结点名, sql:开关表示查询"/>
+            <attr name="rootSql" des="根结点查询SQL，必须返回唯一值"/>
+            <attr name="parentFieldName" des="父字段名"/>
+            <attr name="isDataView" des="是否只读(仅显示结点路径)" dataType="select" values="[false, true]"/>
+            <attr name="textFieldName" des="显示的文本字段"/>
+            <attr name="initWhere" des="初始化where(不写where)"/>
+            <attr name="treeNodePathWhere" des="dataEdit时查询用的节点路径where"/>
+            <attr name="params" des="传入的参数, 不写{}"/>
+            <attr name="service" des="生成树结点需要调用的service方法"/>
+            <attr name="allowCheck" required="true" default="true" dataType="select" values="[true, false]"
+                  des="是否允许多选"/>
+            <attr name="onlyLeafVal" default="false" dataType="select" values="[false, true]" des="是否仅保存叶结点值"/>
+            <!--<attr name="lazy" required="true" default="false" dataType="select" values="[false, true]" des="是否懒加载" /> <attr name="expandLayer" required="true" default="0" des="初始展开层数(0表示全部,正数表示正数展开,负数表示倒数展开)" /> -->
+            <attr name="expandAll" default="true" dataType="select" values="[true, false]" des="是否全部展开"/>
+            <attr name="chkboxType" des="勾选 checkbox 对于父子节点的关联关系,参看ztree相关定义(不写{})"/>
+            <attr name="levelFieldName" des="级别顺序字段"/>
+            <attr name="icon" des="指定ICON"/>
+            <attr name="iconOpen" des="指定展开时ICON"/>
+            <attr name="iconClose" des="指定关闭时ICON"/>
+            <attr name="href" dataType="pageList" des="节点链接页面"/>
+            <attr name="hrefParams" des="href传参(JSON格式, 不写{})"/>
+            <attr name="showType" des="展现方式(也可直接输入目标col ID)" default="_popup" dataType="selectInput"
+                  values="['_popup', '_newTab']"/>
+            <attr name="title" des="提示文字"/>
+            <attr name="des" des="描述"/>
+        </tag>
+        <tag name="realLeaf" noconditionSql="true">
+            <attr name="idValueFieldName" required="true" des="返回的ID值字段名"/>
+            <attr name="textValueFieldName" required="true" des="返回的文本字段名"/>
+            <attr name="from" required="true" des="展开叶结点sql的from语句，不包括from"/>
+            <attr name="refField" required="true" des="叶结点与父结点关联的外键名"/>
+            <attr name="parentRefField" des="父结点与叶节点关联的外键名(不写则为主键)"/>
+            <attr name="orderBy" des="叶结点排序字段"/>
+            <attr name="order" des="叶结点排序" dataType="select" values="['asc', 'desc']"/>
+            <attr name="icon" des="指定ICON"/>
+            <attr name="href" dataType="pageList" des="节点链接页面"/>
+            <attr name="hrefParams" des="href传参(JSON格式, 不写{})"/>
+            <attr name="showType" des="展现方式(也可直接输入目标col ID)" default="_popup" dataType="selectInput"
+                  values="['_popup', '_newTab']"/>
+            <attr name="title" des="提示文字"/>
+            <attr name="removeEmpty" default="false" dataType="select" values="[false, true]" des="是否移除空父节点"/>
+        </tag>
+        <tag name="m2mFormLink" noconditionSql="true">
+            <attr name="linkPage" des="链接Form所在页面" dataType="pageList"/>
+            <attr name="linkFormId" required="true" des="链接到的Form Id"/>
+            <attr name="isModiForm" required="true" default="false" dataType="select" values="[false, true]"
+                  des="是否为修改, 将导致从数据库中加载初始化数据"/>
+            <attr name="midTableName" des="中间表名" required="true"/>
+            <attr name="thisFkName" des="本方外键名" required="true"/>
+            <attr name="manyFieldName" des="多方外键名" required="true"/>
+            <attr name="otherWhere" des="其它where条件,以and或or开关"/>
+        </tag>
+        <tag name="m2mDataTableLink" noconditionSql="true">
+            <attr name="linkPage" des="链接DataTable所在页面" dataType="pageList"/>
+            <attr name="linkDataTableId" required="true" des="链接到的DataTable Id"/>
+            <attr name="midTableName" des="中间表名" required="true"/>
+            <attr name="thisFkName" des="本方外键名" required="true"/>
+            <attr name="manyFieldName" des="多方外键名" required="true"/>
+            <attr name="inFieldName" des="in字段名称" default="id"/>
+        </tag>
+        <tag name="reportTableLink" noconditionSql="true">
+            <attr name="linkPage" des="链接ReportTable所在页面" dataType="pageList"/>
+            <attr name="reportTableId" required="true" des="链接到的ReportTable Id"/>
+            <attr name="reportTableFieldId" required="true" des="链接到的ReportTable字段Id"/>
+        </tag>
+        <tag name="extraFields" noconditionSql="true"/>
+        <tag name="extraField" noconditionSql="true">
+            <attr name="fieldName" des="字段名(如果带.则自动转化为_)" required="true"/>
+        </tag>
+        <tag name="treeNodeConditions" noconditionSql="true"/>
+        <tag name="treeNodeCondition" noconditionSql="true">
+            <attr name="fieldName" required="true" des="字段名称"/>
+            <attr name="value" required="true" des="用于比较的值"/>
+            <attr name="type" required="true" default="equal" des="条件" dataType="select"
+                  values="['equal', 'contains', 'not-equal', 'grater', 'grater-equal', 'less', 'less-equal']"/>
+            <attr name="style" des="style设置(用单引号标识)"/>
+            <attr name="href" des="链接的页面" dataType="pageList"/>
+            <attr name="hrefParams" des="href传参(JSON格式, 不写{})"/>
+            <attr name="showType" des="展现方式(也可直接输入目标col ID)" default="_popup" dataType="selectInput"
+                  values="['_popup', '_newTab']"/>
+            <attr name="title" des="提示文字"/>
+        </tag>
+        <tag name="treeEditorMenu" noelsecondition="true"/>
+        <tag name="addTreeNode">
+            <attr name="target" des="目标页面" required="true" dataType="pageList"/>
+            <attr name="showType" des="展现方式(也可直接输入目标col ID)" required="true" default="_popup" dataType="selectInput"
+                  values="['_popup', '_newTab']"/>
+            <attr name="title" des="提示文字"/>
+            <attr name="params" des="传入参数"/>
+        </tag>
+        <tag name="delTreeNode">
+            <attr name="title" des="提示文字"/>
+            <attr name="afterSql" des="删除后执行的SQL"/>
+            <attr name="beforeCode" des="删除前执行的Service方法代码"/>
+            <attr name="afterCode" des="删除后执行的Service方法代码"/>
+        </tag>
+        <tag name="modiTreeNode">
+            <attr name="target" des="目标页面" required="true" dataType="pageList"/>
+            <attr name="showType" des="展现方式(也可直接输入目标col ID)" required="true" default="_popup" dataType="selectInput"
+                  values="['_popup', '_newTab']"/>
+            <attr name="title" des="提示文字"/>
+        </tag>
+        <tag name="viewTreeNode">
+            <attr name="target" des="目标页面" required="true" dataType="pageList"/>
+            <attr name="showType" des="展现方式(也可直接输入目标col ID)" required="true" default="_popup" dataType="selectInput"
+                  values="['_popup', '_newTab']"/>
+            <attr name="title" des="提示文字"/>
+        </tag>
+        <tag name="upDownTreeNode"/>
+        <!--综合控件 -->
+        <tag name="workflow" type="3">
+            <attr name="workflowIdSql" des="查询workflowId的SQL"/>
+            <attr name="userworkflowIdSql" des="查询用户workflowId的SQL"/>
+            <attr name="editable" des="是否可编辑" default="false" dataType="select" values="[false, true]"/>
+            <attr name="showActive" des="是否显示当前流程节点" default="true" dataType="select" values="[true,false]"/>
+        </tag>
+        <tag name="planTable" type="3" idRequired="true">
+            <attr name="fromSql" des="from语句(不包括from本身)" required="true"/>
+            <attr name="parentField" des="父字段名" required="true"/>
+            <attr name="workitemField" des="工作项名称字段" required="true"/>
+            <attr name="planStartField" des="计划开始时间字段" required="true"/>
+            <attr name="planFinishField" des="计划结束时间字段" required="true"/>
+            <attr name="planWorkTimeField" des="计划工期字段" required="true"/>
+            <attr name="actualStartField" des="实际开始时间字段"/>
+            <attr name="actualFinishField" des="实际结束时间字段"/>
+            <attr name="actualWorkitemField" des="实际工期字段"/>
+            <attr name="workitemDesField" des="工作描述字段"/>
+            <attr name="percentcompleteField" des="完成百分比字段"/>
+            <attr name="outlineField" des="大纲字段名" required="true"/>
+            <attr name="projPlanField" des="所属项目计划外键字段名" required="true"/>
+            <attr name="readonly" des="是否只读" default="false" dataType="select" values="[false, true]"/>
+            <attr name="height" des="高度" default="800"/>
+            <attr name="listWidth" des="列表项宽度" default="500"/>
+        </tag>
+        <tag name="planTableToolbar" noconditionSql="true"/>
+        <tag name="planTableLinkerButton">
+            <attr name="target" des="目标页面" required="true" dataType="pageList"/>
+            <attr name="showType" des="展现方式(也可直接输入目标col ID)" required="true" default="_popup" dataType="selectInput"
+                  values="['_popup', '_newTab']"/>
+            <attr name="params" des="传入的参数(JSON格式, 不写{}"/>
+            <attr name="title" des="文字" required="true"/>
+            <attr name="glyphicon" des="glyphicon图标"/>
+            <attr name="icon" des="icon图片"/>
+            <attr name="confirm" des="确认信息"/>
+        </tag>
+        <tag name="dynamicReportTable" type="3" idRequired="true">
+            <attr name="idSql" des="要查询的ID值的Sql，如果不填，则默认值为param_pkId"/>
+        </tag>
+        <tag name="reportTable" type="3" idRequired="true">
+            <attr name="idSql" des="列表的ID值选择SQL, 只能包含一个查询字段" required="true"/>
+            <attr name="title" des="标题" required="true"/>
+            <attr name="sequenceTitle" des="序列标题"/>
+            <attr name="sumRowTitle" des="合计行标题"/>
+            <attr name="pageSize" des="分页大小(本地分页)" default="-1" required="true"/>
+            <attr name="export" des="是否导出" default="false" dataType="select" values="[false, true]"/>
+            <attr name="hide" des="是否隐藏" default="false" dataType="select" values="[false, true]"/>
+            <attr name="chartPerRow" des="每行显示的统计图数量" default="1" required="true" dataType="int" minValue="1"/>
+            <attr name="printable" des="是否打印" default="true" dataType="select" values="[true, false]"/>
+            <attr name="printtitle" des="打印标题"/>
+        </tag>
+        <tag name="reportGroupDataField" noconditionSql="true">
+            <attr name="fieldTitles" des="列标题, 多个用;分隔" required="true"/>
+            <attr name="fields" des="要查询的字段名, 与上方列标题对应" required="true"/>
+            <attr name="rowIdFk" des="横向ID值对应的外键名" required="true"/>
+            <attr name="valueSql" des="值SQL, 从from开始，不包括from" required="true"/>
+            <attr name="valueSqlGroupBy" des="字段值SQL的Group By 字段"/>
+            <attr name="sort" des="是否排序" default="false" dataType="select" values="[false, true]"/>
+            <attr name="dataType" des="数据类型" default="string" dataType="select" values="['string', 'number']"/>
+            <attr name="minWidth" des="最小列宽度, 单位px"/>
+        </tag>
+        <tag name="reportDataField" noconditionSql="true">
+            <attr name="staticFieldTitle" des="静态字段标题"/>
+            <attr name="dynamicFieldTitleField" des="动态字段的标题字段"/>
+            <attr name="dynamicFieldFromSql" des="选择动态字段的from语句(不包括from)"/>
+            <attr name="rowIdFkField" des="横向关联主键值外键名"/>
+            <attr name="colIdFkField" des="纵向关联主键值外键名"/>
+            <attr name="valueField" des="值字段"/>
+            <attr name="valueSql" des="字段值SQL, 不包括from"/>
+            <attr name="valueSqlGroupBy" des="字段值SQL的Group By 字段"/>
+            <attr name="sumRowValueCal" des="合计行值计算公式" dataType="select" values="['','sum','avg','max','min']"/>
+            <attr name="sort" des="是否排序" default="false" dataType="select" values="[false, true]"/>
+            <attr name="dataType" des="数据类型" default="string" dataType="select" values="['string', 'number']"/>
+            <attr name="chartType" des="统计图类型" default="" dataType="select" values="['', 'line', 'column', 'pie']"/>
+            <attr name="showChartData" des="是否在统计图中显示值" default="false" dataType="select" values="[false, true]"/>
+            <attr name="chartWidth" des="统计图宽度, 单位px(不写px)"/>
+            <attr name="chartColSpan" des="统计图跨度" default="1" dataType="int" minValue="1"/>
+            <attr name="minWidth" des="最小列宽度, 单位px"/>
+        </tag>
+        <tag name="dataTable" type="3" idRequired="true" clazz="com.rabbit.core.view.tagservice.impl.DataTable"
+             dataUrl="/queryTable">
+            <!--<attr name="idField" des="主键(将以复选框形式呈现)" default="id" dataType="selectInput" values="['none']"/> -->
+            <attr name="idField" des="主键(将以复选框形式呈现)" default="id"/>
+            <attr name="showSelCol" des="是否显示选择列" default="true" dataType="select" values="[true, false]"/>
+            <attr name="allowMulty" des="是否允许多选" default="true" dataType="select" values="[true, false]"/>
+            <attr name="des" des="描述" required="true"/>
+            <attr name="fromSql" des="from语句(不包括from本身)" required="true"/>
+            <attr name="pageSize" des="分页大小(-1代表不分页)" required="true" default="10" dataType="int" minValue="-1"/>
+            <attr name="showAllPage" default="true" des="是否显示全部分页选项" dataType="select" values="[true, false]"/>
+            <attr name="lazy" des="首次载入时是否立即进行查询" required="true" default="false" dataType="select"
+                  values="[false, true]"/>
+            <attr name="viewLink" des="点击首列查看" dataType="pageList"/>
+            <attr name="viewLinkParams" des="链接页面的JSON参数传递, 不包括{}"/>
+            <attr name="viewLinkShowType" des="展现方式(也可直接输入目标col ID)" required="false" default="_popup"
+                  dataType="selectInput" values="['_popup', '_newTab', '_expand']"/>
+            <attr name="searchFieldsPerRow" des="搜索栏中每行搜索控件个数" default="4" dataType="int" minValue="1"/>
+            <attr name="initWhere" des="初始where条件(不包括where)"/>
+            <attr name="initOrderBy" des="初始排序条件(不包括order by)"/>
+            <attr name="beforeCode" des="查询前执行的Service方法代码"/>
+            <attr name="afterCode" des="查询后执行的Service方法代码"/>
+            <attr name="forbiddenEditInlineCondition" des="禁止在线修改条件"/>
+            <attr name="beforeEditCode" des="在线修改前执行的Service方法代码"/>
+            <attr name="afterEditCode" des="在线修改后执行的Service方法代码"/>
+            <attr name="dynamicFieldImportTitle"
+                  des="动态字段值导入(update)标题(sql:开关表明数据库查询), 仅包含可修改的dynamicDataTableField时有效"/>
+            <attr name="parentField" des="父字段名(表示本表有父子关系，可展开)"/>
+            <attr name="levelField" des="树型表格时的排序字段"/>
+            <attr name="autoFixWidth" des="是否自动固定宽度" default="false" dataType="select" values="[false, true]"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+            <attr name="printable" des="是否打印" default="false" dataType="select" values="[false, true]"/>
+            <attr name="printtitle" des="打印标题"/>
+            <attr name="targetCol" des="目标col, 用于当功能按钮触发后重置col内容"/>
+            <attr name="showMoreSearch" des="是否显示更多搜索" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="dataTableConditionSQLFields" noconditionSql="true"/>
+        <tag name="dataTableConditionSQLField" noconditionSql="true">
+            <attr name="fieldName" des="动态SQL字段名" required="true"/>
+            <attr name="fullSQL" des="完整SQL(从from开始，不包括from), 字段值用${sqlval}表示"/>
+        </tag>
+        <tag name="dataTableGroupBy" noconditionSql="true">
+            <attr name="fieldName" required="true" des="分组字段名"/>
+            <attr name="noneGroupName" des="未分组名" default="其它"/>
+        </tag>
+        <tag name="queryConstraints" noconditionSql="true"/>
+        <tag name="queryConstraint" noconditionSql="true">
+            <attr name="constraintDes" required="true" des="约束描述"/>
+            <attr name="where" required="true" des="where条件(不包括where本身)"/>
+        </tag>
+        <tag name="dataTableToolbar" noelsecondition="true"/>
+        <tag name="dataTableAddInlineButton">
+            <attr name="afterSql" des="新增后执行的SQL"/>
+            <attr name="beforeCode" des="添加前执行的Service方法代码"/>
+            <attr name="afterCode" des="添加后执行的Service方法代码"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="dataTableMoveupButton"/>
+        <tag name="dataTableMovedownButton"/>
+        <tag name="dataTableLelelUpButton">
+            <attr name="beforeCode" des="上移前执行的Service方法代码"/>
+            <attr name="afterCode" des="上移后执行的Service方法代码"/>
+        </tag>
+        <tag name="dataTableLelelDownButton">
+            <attr name="beforeCode" des="下移前执行的Service方法代码"/>
+            <attr name="afterCode" des="下移后执行的Service方法代码"/>
+        </tag>
+        <tag name="dataTableLinkerButton">
+            <attr name="target" des="目标页面" required="true" dataType="pageList"/>
+            <attr name="showType" des="展现方式(也可直接输入目标col ID)" required="true" default="_popup" dataType="selectInput"
+                  values="['_popup', '_newTab', '_newWin']"/>
+            <attr name="params" des="传入的参数(JSON格式, 不写{}"/>
+            <attr name="title" des="文字" required="true"/>
+            <attr name="glyphicon" des="glyphicon图标"/>
+            <attr name="icon" des="icon图片"/>
+            <attr name="needCheck" des="是否必须check行" required="true" default="true" dataType="select"
+                  values="[true, false]"/>
+            <attr name="forbiddenCondition" des="禁止使用条件"/>
+            <attr name="forbiddenNotification" des="禁止使用时的错误提示"/>
+            <attr name="confirm" des="确认信息"/>
+            <attr name="showIn" des="在哪里显示" default="operateCol" dataType="select"
+                  values="['operateCol', 'toolbar', 'both']"/>
+        </tag>
+        <tag name="dataTableFileGenBtn">
+            <attr name="label" required="true" des="按钮文字"/>
+            <attr name="serviceMethod" required="true" des="被调用的service方法"/>
+            <attr name="glyphicon" des="glyphicon图标"/>
+            <attr name="icon" des="icon图片"/>
+            <attr name="needCheck" des="是否必须check行" required="true" default="true" dataType="select"
+                  values="[true, false]"/>
+            <attr name="forbiddenCondition" des="禁止使用条件"/>
+            <attr name="forbiddenNotification" des="禁止使用时的错误提示"/>
+            <attr name="confirm" des="确认信息"/>
+            <attr name="showIn" des="在哪里显示" default="operateCol" dataType="select"
+                  values="['operateCol', 'toolbar', 'both']"/>
+        </tag>
+        <tag name="dataTableAddButton" clazz="com.rabbit.core.view.tagservice.impl.AddBtn">
+            <attr name="target" des="目标页面" required="true" dataType="pageList"/>
+            <attr name="showType" des="展现方式(也可直接输入目标col ID)" required="true" default="_popup" dataType="selectInput"
+                  values="['_popup', '_newTab']"/>
+            <attr name="params" des="传入的参数(JSON格式, 不写{})"/>
+        </tag>
+        <tag name="dataTableM2MAddButton" idRequired="true">
+            <attr name="title"/>
+            <attr name="midTableName" des="中间表名" required="true"/>
+            <attr name="thisFkName" des="本方外键名"/>
+            <attr name="thisFkValue" des="本方外键SQL(不设置则为param_pkId)"/>
+            <attr name="manyFieldName" des="多方外键名" required="true"/>
+            <attr name="textField" des="显示文字字段名" required="true"/>
+            <attr name="afterSql" des="添加后执行的SQL"/>
+            <attr name="beforeCode" des="添加前执行的Service方法代码"/>
+            <attr name="afterCode" des="添加后执行的Service方法代码"/>
+        </tag>
+        <tag name="dataTableModiButton" clazz="com.rabbit.core.view.tagservice.impl.ModiBtn">
+            <attr name="target" des="目标页面" required="true" dataType="pageList"/>
+            <attr name="showType" des="展现方式(也可直接输入目标col ID)" required="true" default="_popup" dataType="selectInput"
+                  values="['_popup', '_newTab']"/>
+            <attr name="params" des="传入的参数(JSON格式, 不写{}"/>
+            <attr name="forbiddenCondition" des="禁止使用条件"/>
+            <attr name="forbiddenNotification" des="禁止使用时的错误提示"/>
+            <attr name="showIn" des="在哪里显示" default="operateCol" dataType="select"
+                  values="['operateCol', 'toolbar', 'both']"/>
+        </tag>
+        <tag name="dataTableViewButton" clazz="com.rabbit.core.view.tagservice.impl.ViewBtn">
+            <attr name="target" des="目标页面" required="true" dataType="pageList"/>
+            <attr name="showType" des="展现方式(也可直接输入目标col ID)" required="true" default="_popup" dataType="selectInput"
+                  values="['_popup', '_newTab']"/>
+            <attr name="params" des="传入的参数(JSON格式, 不写{}"/>
+            <attr name="forbiddenCondition" des="禁止使用条件"/>
+            <attr name="forbiddenNotification" des="禁止使用时的错误提示"/>
+            <attr name="showIn" des="在哪里显示" default="operateCol" dataType="select"
+                  values="['operateCol', 'toolbar', 'both']"/>
+        </tag>
+        <tag name="dataTableDelButton" clazz="com.rabbit.core.view.tagservice.impl.DeleteBtn">
+            <attr name="afterSql" des="删除后执行的SQL"/>
+            <attr name="beforeCode" des="删除前执行的Service方法代码"/>
+            <attr name="afterCode" des="删除后执行的Service方法代码"/>
+            <attr name="confirm" des="自定义的提示信息"/>
+            <attr name="forbiddenCondition" des="禁止使用条件"/>
+            <attr name="forbiddenNotification" des="禁止使用时的错误提示"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+            <attr name="showIn" des="在哪里显示" default="operateCol" dataType="select"
+                  values="['operateCol', 'toolbar', 'both']"/>
+        </tag>
+        <tag name="dataTableBatchExecButton" idRequired="true">
+            <attr name="updateSql" des="执行的update SQL片段, 默认从set开始(不包括set), 完整版则包括全部sql。为空则不执行任何SQL，动作由service完成"/>
+            <attr name="mustCheck" des="是否必须选择" default="true" dataType="select" values="[true, false]"/>
+            <attr name="allowMulty" des="是否允许多选" default="true" dataType="select" values="[true, false]"/>
+            <attr name="showLoading" des="是否显示加载中..." default="false" dataType="select" values="[false, true]"/>
+            <attr name="afterSql" des="update后执行的SQL"/>
+            <attr name="beforeCode" des="操作前执行的Service方法代码"/>
+            <attr name="afterCode" des="操作后执行的Service方法代码"/>
+            <attr name="title" des="文字" required="true"/>
+            <attr name="glyphicon" des="glyphicon图标"/>
+            <attr name="icon" des="icon图片"/>
+            <attr name="confirm" des="确认信息"/>
+            <attr name="forbiddenCondition" des="禁止使用条件"/>
+            <attr name="forbiddenNotification" des="禁止使用时的错误提示"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+            <attr name="showIn" des="在哪里显示" default="toolbar" dataType="select"
+                  values="['toolbar', 'operateCol', 'both']"/>
+        </tag>
+        <tag name="dataTableColSelButton"/>
+        <tag name="dataTableClearAllButton">
+            <attr name="beforeCode" des="查询前执行的Service方法代码"/>
+            <attr name="afterCode" des="查询后执行的Service方法代码"/>
+            <attr name="afterSql" des="清空后执行的SQL"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="xlsimport">
+            <attr name="title" required="true" des="标题, 支持sql:前缀查询"/>
+            <attr name="model" required="true" des="数据库model" dataType="modelSelect"/>
+            <attr name="beforeCode" des="操作前执行的Service方法代码"/>
+            <attr name="afterCode" des="操作后执行的Service方法代码"/>
+            <attr name="afterSql" des="导入完成后的SQL"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="xlsexport">
+            <attr name="title" des="导出标题, 支持sql:前缀查询" required="true"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="hiddenDataTableField" noconditionSql="true">
+            <attr name="fieldName" des="字段名" required="true"/>
+            <attr name="fieldValue" des="字段值" required="true"/>
+        </tag>
+        <tag name="dataTableField" noconditionSql="true">
+            <attr name="fieldName" des="字段名" required="true"/>
+            <attr name="fieldTitle" des="显示名"/>
+            <attr name="fieldType" des="字段类型" required="true" dataType="select" default="string"
+                  values="['string', 'dateTime', 'date', 'number', 'digit', 'img', 'file']"/>
+            <attr name="sorting" des="是否允许排序" required="true" default="true" dataType="select" values="[true, false]"/>
+            <attr name="editInline" des="是否允许在线修改" required="true" default="false" dataType="select"
+                  values="[false, true]"/>
+            <attr name="nullable" des="是否允许为空" default="true" dataType="select" values="[true, false]"/>
+            <attr name="unique" des="是否允许重复" default="false" dataType="select" values="[false, true]"/>
+            <attr name="range" des="数值范围(参看nicevalidator规则)"/>
+            <attr name="length" des="字符长度(参看nicevalidator规则)"/>
+            <attr name="afterSql" des="在线修改后执行的SQL"/>
+            <attr name="validateFun" des="定义在service中的验证函数,不写括号"/>
+            <attr name="values" des="可选值列表(以,分隔)"/>
+            <attr name="valuesSql" des="查询备选值的sql(必须包含两个字段，第一个为主键，第二个为文本)"/>
+            <attr name="show" des="是否显示" default="true" requried="true" dataType="select" values="[true, false]"/>
+            <attr name="exportXls" des="是否导出Excel" default="true" requried="true" dataType="select"
+                  values="[true, false]"/>
+            <attr name="width" des="宽度"/>
+            <attr name="isProgress" des="是否显示百分比" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="editInlineCondition" des="在线修改条件" noconditionSql="true">
+            <attr name="compareValue" des="值"/>
+            <attr name="fieldName" required="true" des="比较字段名"/>
+            <attr name="type" required="true" default="equal" des="条件" dataType="select"
+                  values="['equal', 'contains', 'not-equal', 'grater', 'grater-equal', 'less', 'less-equal']"/>
+        </tag>
+        <tag name="extraDataTableField" noconditionSql="true">
+            <attr name="fieldName" des="字段名,与之前的不重复即可"/>
+            <attr name="fieldValue" des="字段值(sql开头表示sql查询)" required="true"/>
+            <attr name="fieldTitle" des="显示名" required="true"/>
+            <attr name="show" des="是否显示" default="true" requried="true" dataType="select" values="[true, false]"/>
+            <attr name="width" des="宽度"/>
+        </tag>
+        <tag name="dynamicDataTableField" idRequired="true" noconditionSql="true">
+            <attr name="fromSql" des="查询动态字段的SQL, 不包括from" required="true"/>
+            <attr name="titleField" des="显示名字段" required="true"/>
+            <attr name="valueSql" des="字段值SQL, 不包括from" required="true"/>
+            <attr name="rowIdFkField" des="横向关联主键值外键名" required="true"/>
+            <attr name="colIdFkField" des="纵向关联主键值外键名" required="true"/>
+            <attr name="valueField" des="值字段" required="true"/>
+            <attr name="fieldType" des="字段类型" required="true" dataType="select" default="string"
+                  values="['string', 'dateTime', 'date', 'number', 'img', 'file']"/>
+            <attr name="editInlineBatch" des="是否允许在线批量修改" required="true" default="false" dataType="select"
+                  values="[false, true]"/>
+            <attr name="beforeCode" des="操作前执行的Service方法代码"/>
+            <attr name="afterCode" des="操作后执行的Service方法代码"/>
+            <attr name="afterSql" des="导入完成后的SQL"/>
+            <attr name="validateFun" des="验证数据的service方法, 不写括号"/>
+            <attr name="validateFromSql" des="验证数据是否有效的sql, 从from开始(不包括from)"/>
+            <attr name="width" des="宽度"/>
+        </tag>
+        <tag name="valueConditions" noconditionSql="true"/>
+        <tag name="valueCondition" noconditionSql="true">
+            <attr name="value" required="true" des="值"/>
+            <attr name="type" required="true" default="equal" des="条件" dataType="select"
+                  values="['equal', 'contains', 'not-equal', 'grater', 'grater-equal', 'less', 'less-equal', 'null', 'not-null']"/>
+            <attr name="display" des="显示文本"/>
+            <attr name="style" des="style设置"/>
+        </tag>
+        <tag name="dataTableFieldSearch" noconditionSql="true">
+            <attr name="searchType" des="查询方式" required="true" dataType="select" default="like"
+                  values="['like', 'equal', 'grater', 'grater-equal', 'less', 'less-equal', 'between']"/>
+            <attr name="showInSearchBar" des="是否在搜索栏显示" required="false" default="true" dataType="select"
+                  values="[true, false] "/>
+        </tag>
+        <tag name="dbModelStack" noconditionSql="true"/>
+        <tag name="dbModel" noconditionSql="true">
+            <attr name="model" des="数据库model" required="true" dataType="modelSelect"/>
+            <attr name="ref" des="到下一级dbModel的外键名"/>
+        </tag>
+        <tag name="valueStack" noconditionSql="true"/>
+        <!--data Add -->
+        <tag name="dataAddForm" type="3" idRequired="true" clazz="com.rabbit.core.view.tagservice.impl.DataAddForm"
+             dataUrl="/addForm/save">
+            <attr name="des" des="描述" required="true"/>
+            <attr name="model" des="数据库model" dataType="modelSelect"/>
+            <attr name="rowFields" des="每行显示多少条记录项" required="true" default="4" dataType="int" minValue="1"/>
+            <attr name="closeOnSucess" des="添加成功后关闭(popup有效)" required="false" default="false" dataType="select"
+                  values="[false, true]"/>
+            <attr name="closeOnFail" des="添加失败后关闭(popup有效)" required="false" default="false" dataType="select"
+                  values="[false, true]"/>
+            <attr name="callBackObj" des="添加成功后触发指定对象的click事件" required="false"/>
+            <attr name="beforeCode" des="查询前执行的Service方法代码"/>
+            <attr name="afterCode" des="查询后执行的Service方法代码"/>
+            <attr name="afterSql" des="新增后执行的SQL"/>
+            <attr name="glyphicon" des="glyphicon图标"/>
+            <attr name="icon" des="icon图片"/>
+            <attr name="buttonTitle" des="保存按钮文字"/>
+            <attr name="confirm" des="确认消息"/>
+            <attr name="showLoading" default="false" dataType="select" values="[false, true]" des="是否显示加载框"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <!--data Edit -->
+        <tag name="dataEditForm" type="3" idRequired="true" clazz="com.rabbit.core.view.tagservice.impl.DataEditForm"
+             dataUrl="/editForm/save">
+            <attr name="des" des="描述" required="true"/>
+            <attr name="model" des="数据库model" required="true" dataType="modelSelect"/>
+            <attr name="rowFields" des="每行显示多少条记录项" required="true" default="4" dataType="int" minValue="1"/>
+            <attr name="closeOnSucess" des="保存成功后关闭(popup有效)" required="false" default="false" dataType="select"
+                  values="[false, true]"/>
+            <attr name="closeOnFail" des="添加失败后关闭(popup有效)" required="false" default="false" dataType="select"
+                  values="[false, true]"/>
+            <attr name="callBackObj" des="保存成功后触发指定对象的click事件" required="false"/>
+            <attr name="refreshWindow" des="保存成功后是否刷新整个页面" required="false" default="false" dataType="select"
+                  values="[false, true]"/>
+            <attr name="beforeInit" des="查询前执行的Service方法代码"/>
+            <attr name="beforeCode" des="保存前执行的Service方法代码"/>
+            <attr name="afterCode" des="保存后执行的Service方法代码"/>
+            <attr name="afterSql" des="修改后执行的SQL"/>
+            <attr name="glyphicon" des="glyphicon图标"/>
+            <attr name="icon" des="icon图片"/>
+            <attr name="buttonTitle" des="保存按钮文字"/>
+            <attr name="confirm" des="确认消息"/>
+            <attr name="showLoading" default="false" dataType="select" values="[false, true]" des="是否显示加载框"/>
+            <attr name="initWhere" des="初始化查询对象的where语句（不包括where)"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <!--data View -->
+        <tag name="dataViewForm" type="3" idRequired="true" clazz="com.rabbit.core.view.tagservice.impl.DataViewForm">
+            <attr name="des" des="描述" required="true"/>
+            <attr name="model" des="数据库model" required="true" dataType="modelSelect"/>
+            <attr name="rowFields" des="每行显示多少条记录项" required="true" default="4" dataType="int" minValue="1"/>
+            <attr name="callBackObj" des="添加成功后触发指定对象的click事件" required="false"/>
+            <attr name="beforeCode" des="查询前执行的Service方法代码"/>
+            <attr name="afterCode" des="查询后执行的Service方法代码"/>
+            <attr name="afterSql" des="查看后执行的SQL"/>
+            <attr name="printable" des="是否打印" default="false" dataType="select" values="[false, true]"/>
+            <attr name="printtitle" des="打印标题"/>
+            <attr name="initWhere" des="初始化查询对象的where语句（不包括where)"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <!-- data wizard -->
+        <tag name="dataViewWizardForm" type="3" idRequired="true">
+            <attr name="des" des="描述" required="true"/>
+            <attr name="model" des="数据库model" required="true" dataType="modelSelect"/>
+            <attr name="beforeCode" des="查询前执行的Service方法代码"/>
+            <attr name="afterCode" des="查询后执行的Service方法代码"/>
+            <attr name="afterSql" des="查看后执行的SQL"/>
+            <attr name="initWhere" des="初始化查询对象的where语句（不包括where)"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="dataEditWizardForm" type="3" idRequired="true">
+            <attr name="des" des="描述" required="true"/>
+            <attr name="model" des="数据库model" required="true" dataType="modelSelect"/>
+            <attr name="closeOnSucess" des="保存成功后关闭(popup有效)" required="false" default="false" dataType="select"
+                  values="[false, true]"/>
+            <attr name="callBackObj" des="保存成功后触发指定对象的click事件" required="false"/>
+            <attr name="beforeInit" des="查询前执行的Service方法代码"/>
+            <attr name="beforeCode" des="保存前执行的Service方法代码"/>
+            <attr name="afterCode" des="保存后执行的Service方法代码"/>
+            <attr name="afterSql" des="修改后执行的SQL"/>
+            <attr name="glyphicon" des="glyphicon图标"/>
+            <attr name="icon" des="icon图片"/>
+            <attr name="buttonTitle" des="保存按钮文字"/>
+            <attr name="initWhere" des="初始化查询对象的where语句（不包括where)"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="dataAddWizardForm" type="3" idRequired="true">
+            <attr name="des" des="描述" required="true"/>
+            <attr name="model" des="数据库model" required="true" dataType="modelSelect"/>
+            <attr name="closeOnSucess" des="添加成功后关闭(popup有效)" required="false" default="false" dataType="select"
+                  values="[false, true]"/>
+            <attr name="callBackObj" des="添加成功后触发指定对象的click事件" required="false"/>
+            <attr name="beforeCode" des="查询前执行的Service方法代码"/>
+            <attr name="afterCode" des="查询后执行的Service方法代码"/>
+            <attr name="afterSql" des="新增后执行的SQL"/>
+            <attr name="glyphicon" des="glyphicon图标"/>
+            <attr name="icon" des="icon图片"/>
+            <attr name="buttonTitle" des="保存按钮文字"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+        </tag>
+        <tag name="fromWizardStep" noconditionSql="true">
+            <attr name="stepTitle" des="步骤标题" required="true"/>
+            <attr name="stepDesc" des="步骤描述"/>
+            <attr name="contentTitle" des="步骤内容标题"/>
+            <attr name="rowFields" des="每行显示多少条记录项" required="true" default="4" dataType="int" minValue="1"/>
+        </tag>
+        <!-- <tag name="wizardMultiFroms" idRequired="true" type="3"> <attr name="des" des="描述" /> </tag> <tag name="wizardMultiFromsStep"> <attr name="stepTitle" des="步骤标题" required="true"/> <attr name="stepDesc" des="步骤描述" /> <attr name="contentTitle" des="步骤内容标题" /> </tag> -->
+        <tag name="dataField" noelsecondition="true">
+            <attr name="fieldName" des="字段名" required="true"/>
+            <attr name="fieldTitle" des="显示名" required="true"/>
+            <attr name="fieldType" des="字段类型" required="true" dataType="select" default="string"
+                  values="['string', 'dateTime', 'date', 'number', 'digit']"/>
+            <attr name="nullable" des="是否允许为空" required="false" default="true" dataType="select"
+                  values="[true, false]"/>
+            <attr name="unique" des="是否允许重复" required="false" default="false" dataType="select" values="[false, true]"/>
+            <attr name="rowspan" des="跨行数" default="1" required="true"/>
+            <attr name="colspan" des="跨列数" default="1" required="true"/>
+            <attr name="range" des="数值范围(参看nicevalidator规则)"/>
+            <attr name="length" des="字符长度(参看nicevalidator规则)"/>
+            <attr name="match" des="数值匹配(参看nicevalidator规则)"/>
+            <attr name="validateExp" des="值验证表达式, ${字段名}表示字段值"/>
+            <attr name="validateError" des="验证失败时的提示"/>
+            <attr name="showExp" des="显示条件表达式, ${字段名}表示字段值"/>
+            <attr name="standAloneAuth" des="是否需要单独授权" default="false" dataType="select" values="[false, true]"/>
+            <attr name="style" des="style设置"/>
+        </tag>
+        <tag name="m2mDataField" noelsecondition="true">
+            <attr name="fieldTitle" des="显示名" required="true"/>
+            <attr name="midTableName" des="中间表名" required="true"/>
+            <attr name="thisFkName" des="本方外键名" required="true"/>
+            <attr name="manyFieldName" des="多方外键名" required="true"/>
+            <attr name="rowspan" des="跨行数" default="1" required="true"/>
+            <attr name="colspan" des="跨列数" default="1" required="true"/>
+            <attr name="nullable" des="是否允许为空" default="true" dataType="select" values="[true, false]"/>
+            <attr name="style" des="style设置"/>
+            <attr name="showExp" des="显示条件表达式, ${字段名}表示字段值"/>
+        </tag>
+        <tag name="extraDataField" noelsecondition="true">
+            <attr name="name" des="控件name属性，以便提交到后台"/>
+            <attr name="fieldTitle" des="显示名" required="true"/>
+            <attr name="rowspan" des="跨行数" default="1" required="true"/>
+            <attr name="colspan" des="跨列数" default="1" required="true"/>
+            <attr name="range" des="数值范围(参看nicevalidator规则)"/>
+            <attr name="length" des="字符长度(参看nicevalidator规则)"/>
+            <attr name="validateExp" des="值验证表达式, ${字段名}表示字段值"/>
+            <attr name="validateError" des="验证失败时的提示"/>
+            <attr name="showExp" des="显示条件表达式, ${字段名}表示字段值"/>
+            <attr name="style" des="style设置"/>
+        </tag>
+        <tag name="th" noelsecondition="true">
+            <attr name="fieldTitle" des="显示名" required="true"/>
+            <attr name="rowspan" des="跨行数" default="1" required="true"/>
+            <attr name="colspan" des="跨列数" default="1" required="true"/>
+        </tag>
+        <tag name="dataMappings" noconditionSql="true"/>
+        <tag name="dataMapping" noconditionSql="true">
+            <attr name="key" des="键" required="true"/>
+            <attr name="value" des="值" required="true"/>
+        </tag>
+        <tag name="xlsDataField" noconditionSql="true">
+            <attr name="fieldName" des="字段名" required="true"/>
+            <attr name="fieldTitle" des="显示名" required="true"/>
+            <attr name="fieldType" des="字段类型" required="true" dataType="select" default="string"
+                  values="['string', 'dateTime', 'date', 'number', 'digit']"/>
+            <attr name="nullable" des="是否允许为空" required="false" default="true" dataType="select"
+                  values="[true, false]"/>
+            <attr name="unique" des="是否允许重复" required="false" default="false" dataType="select" values="[false, true]"/>
+            <attr name="validateFun" des="定义在service中的验证函数,不写括号"/>
+            <attr name="values" des="可选值列表(以,分隔)"/>
+            <attr name="valuesSql" des="查询备选值的sql(必须包含两个字段，第一个为主键，第二个为文本)"/>
+            <attr name="showDropList" des="是否显示下拉列表(设置values和valuesSql时有效)" default="true" dataType="select"
+                  values="[true, false]"/>
+            <attr name="comment" des="备注"/>
+        </tag>
+    </tagDefine>
+    <tagStructure>
+        <tag name="root">
+            <!-- root指可以直接放置到根结点中的标签 -->
+            <tag name="MobilePage"/>
+            <tag name="container"/>
+            <tag name="tabs"/>
+            <tag name="dynamicTabs"/>
+            <tag name="switherSelector"/>
+            <tag name="dynamicForm"/>
+            <!--<tag name="repeateArea" /> -->
+            <tagType value="2"/>
+            <tagType value="3"/>
+        </tag>
+        <tag name="container">
+            <tag name="row" required="true"/>
+        </tag>
+        <tag name="row">
+            <tag name="col" required="true"/>
+        </tag>
+        <tag name="col">
+            <tag name="container"/>
+            <tag name="tabs"/>
+            <tag name="dynamicTabs"/>
+            <tag name="switherSelector"/>
+            <tag name="dynamicForm"/>
+            <tagType value="2"/>
+            <tagType value="3"/>
+        </tag>
+        <!--<tag name="repeateArea" > <tagType value="2" /> <tagType value="3" /> </tag> -->
+        <tag name="tabs">
+            <tag name="tab"/>
+        </tag>
+        <tag name="tab">
+            <tag name="container"/>
+            <tag name="dynamicTabs"/>
+            <tag name="switherSelector"/>
+            <tagType value="2"/>
+            <tagType value="3"/>
+        </tag>
+        <tag name="select">
+            <tag name="option"/>
+        </tag>
+        <tag name="planTable">
+            <tag name="planTableToolbar"/>
+        </tag>
+        <tag name="planTableToolbar">
+            <tag name="planTableLinkerButton"/>
+        </tag>
+        <tag name="reportTable">
+            <tag name="reportDataField" required="true"/>
+            <tag name="reportGroupDataField"/>
+        </tag>
+        <tag name="reportDataField">
+            <tag name="reportDataField"/>
+        </tag>
+        <tag name="dataTable">
+            <tag name="dataTableToolbar"/>
+            <tag name="dataTableField" required="true"/>
+            <!--<tag name="dataTableGroupField" /> -->
+            <tag name="extraDataTableField"/>
+            <tag name="dynamicDataTableField"/>
+            <tag name="queryConstraints"/>
+            <tag name="selfInfTree"/>
+            <tag name="hiddenDataTableField"/>
+            <tag name="dataTableGroupBy"/>
+            <tag name="dataTableConditionSQLFields"/>
+        </tag>
+        <tag name="dataTableConditionSQLFields">
+            <tag name="dataTableConditionSQLField"/>
+        </tag>
+        <tag name="extraDataTableField">
+            <tag name="valueConditions"/>
+        </tag>
+        <tag name="queryConstraints">
+            <tag name="queryConstraint" required="true"/>
+        </tag>
+        <tag name="dataTableToolbar">
+            <tag name="dataTableAddInlineButton"/>
+            <tag name="dataTableAddButton"/>
+            <tag name="dataTableModiButton"/>
+            <tag name="dataTableViewButton"/>
+            <tag name="dataTableLinkerButton"/>
+            <tag name="dataTableDelButton"/>
+            <tag name="dataTableBatchExecButton"/>
+            <tag name="dataTableColSelButton"/>
+            <tag name="dataTableClearAllButton"/>
+            <tag name="dataTableM2MAddButton"/>
+            <tag name="xlsimport"/>
+            <tag name="xlsexport"/>
+            <tag name="dataTableMoveupButton"/>
+            <tag name="dataTableMovedownButton"/>
+            <tag name="dataTableLelelUpButton"/>
+            <tag name="dataTableLelelDownButton"/>
+            <tag name="dataTableFileGenBtn"/>
+            <tag name="hr"/>
+        </tag>
+        <tag name="dataTableField">
+            <tag name="dataTableFieldSearch"/>
+            <tag name="dbModelStack"/>
+            <tag name="valueConditions"/>
+            <tag name="select"/>
+            <tag name="dbSelect"/>
+            <tag name="selects"/>
+            <tag name="dmDbSelect"/>
+            <tag name="editInlineCondition"/>
+            <tag name="singleTreeNodePath"/>
+        </tag>
+        <tag name="dbModelStack">
+            <tag name="dbModel" required="true"/>
+        </tag>
+        <tag name="valueStack">
+            <tag name="dbModel" required="true"/>
+        </tag>
+        <tag name="valueConditions">
+            <tag name="valueCondition" required="true"/>
+        </tag>
+        <tag name="dataTableFieldSearch">
+            <tag name="text"/>
+            <tag name="dateTime"/>
+            <tag name="dbSelect"/>
+            <tag name="selects"/>
+            <tag name="dmDbSelect"/>
+            <tag name="select"/>
+        </tag>
+        <tag name="dataAddForm">
+            <tag name="dataField"/>
+            <tag name="include"/>
+            <tag name="th"/>
+            <tag name="m2mDataField"/>
+            <tag name="extraDataField"/>
+        </tag>
+        <tag name="dataEditForm">
+            <tag name="dataField"/>
+            <tag name="include"/>
+            <tag name="th"/>
+            <tag name="m2mDataField"/>
+            <tag name="extraDataField"/>
+        </tag>
+        <tag name="dataViewForm">
+            <tag name="dataField"/>
+            <tag name="include"/>
+            <tag name="th"/>
+            <!--<tag name="m2mDataField" /> -->
+            <tag name="extraDataField"/>
+        </tag>
+        <tag name="dataField">
+            <tagType value="2"/>
+            <tag name="dbModelStack"/>
+            <tag name="valueStack"/>
+            <tag name="valueConditions"/>
+        </tag>
+        <tag name="m2mDataField">
+            <tag name="dataSel"/>
+            <tag name="dbCheckbox"/>
+        </tag>
+        <tag name="extraDataField">
+            <tagType value="2"/>
+            <tag name="dataTable"/>
+            <tag name="m2mDataView"/>
+        </tag>
+        <tag name="xlsimport">
+            <tag name="xlsDataField" required="true"/>
+        </tag>
+        <tag name="xlsDataField">
+            <tag name="dbModelStack"/>
+            <tag name="dataMappings"/>
+        </tag>
+        <tag name="dataMappings">
+            <tag name="dataMapping" required="true"/>
+        </tag>
+        <tag name="extraFields">
+            <tag name="extraField" required="true"/>
+        </tag>
+        <tag name="treeNodeConditions">
+            <tag name="treeNodeCondition" required="true"/>
+        </tag>
+        <tag name="selfInfTree">
+            <tag name="treeEditorMenu"/>
+            <tag name="realLeaf"/>
+            <tag name="m2mFormLink"/>
+            <tag name="m2mDataTableLink"/>
+            <tag name="reportTableLink"/>
+            <tag name="extraFields"/>
+            <tag name="treeNodeConditions"/>
+        </tag>
+        <tag name="realLeaf">
+            <tag name="treeEditorMenu"/>
+            <tag name="realLeaf"/>
+            <tag name="extraFields"/>
+            <tag name="treeNodeConditions"/>
+        </tag>
+        <tag name="treeEditorMenu">
+            <tag name="addTreeNode"/>
+            <tag name="delTreeNode"/>
+            <tag name="modiTreeNode"/>
+            <tag name="viewTreeNode"/>
+            <tag name="upDownTreeNode"/>
+        </tag>
+        <tag name="dataSel">
+            <tag name="dataTable"/>
+            <!--<tag name="selfInfTree" /> -->
+        </tag>
+        <tag name="dataTableM2MAddButton">
+            <tag name="dataTable"/>
+            <tag name="selfInfTree"/>
+        </tag>
+        <tag name="dataEditWizardForm">
+            <tag name="fromWizardStep" required="true"/>
+        </tag>
+        <tag name="dataViewWizardForm">
+            <tag name="fromWizardStep" required="true"/>
+        </tag>
+        <tag name="dataAddWizardForm">
+            <tag name="fromWizardStep" required="true"/>
+        </tag>
+        <tag name="fromWizardStep">
+            <tag name="dataField"/>
+            <tag name="m2mDataField"/>
+            <tag name="extraDataField"/>
+        </tag>
+        <tag name="dbSelect">
+            <tag name="queryConstraints"/>
+        </tag>
+        <tag name="selects">
+            <tag name="selectList" required="true"/>
+        </tag>
+    </tagStructure>
+</tagDefines>

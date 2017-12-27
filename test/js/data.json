@@ -1,0 +1,27 @@
+{
+  "searchFormModel": {
+    "birthday": {
+      "fieldName": "birthday",
+      "searchType": "equal",
+      "value": ""
+    },
+    "realName": {
+      "fieldName": "realName",
+      "searchType": "like",
+      "value": ""
+    },
+    "loginid": {
+      "fieldName": "loginid",
+      "searchType": "like",
+      "value": ""
+    },
+    "phone": {
+      "fieldName": "phone",
+      "searchType": "like",
+      "value": ""
+    }
+  },
+  "data": "[]",
+  "showSearch": true,
+  "searchFormContent": "<el-form-item label=\"登录ID\">\n<el-input size=medium v-model=\"rabbitUserListsearchFormModel.loginid.value\" placeholder=\"登录ID\"></el-input>\n</el-form-item>\n<el-form-item label=\"姓名\">\n<el-input size=mini v-model=\"rabbitUserListsearchFormModel.realName.value\" placeholder=\"姓名\"></el-input>\n</el-form-item>\n<el-form-item label=\"电话\">\n<el-input size=mini v-model=\"rabbitUserListsearchFormModel.phone.value\" placeholder=\"电话\"></el-input>\n</el-form-item>\n<el-form-item label=\"出生日期\">\n<el-input size=small v-model=\"rabbitUserListsearchFormModel.birthday.value\" placeholder=\"出生日期\"></el-input>\n</el-form-item>\n"
+}

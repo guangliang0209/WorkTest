@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    var url = "http://lcyq.comsys.net.cn/formservices/getFormContent?id=4";
+    var param = "";
+    var obj = new ActiveXObject("WinHttp.WinHttpRequest.5.1");
+    obj.Open("get", url, false);
+    obj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    obj.setRequestHeader("Referer", "http://lcyq.comsys.net.cn");
+    obj.Send(param);
+    alert(obj.responseText);
+</script>

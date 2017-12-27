@@ -1,0 +1,21 @@
+{
+  "type": "header/body",
+  "content": {
+    "detail": {
+      "type": "",
+      "content": ""
+    },
+    "coordinate": "",
+    "extensibility": {
+      "horizontal": true,
+      "vertical": true
+    },
+    "style": {
+      "width": "",
+      "height": "",
+      "border": "",
+      "font": "",
+      "background-color": ""
+    }
+  }
+}

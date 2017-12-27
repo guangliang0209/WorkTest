@@ -1,0 +1,25 @@
+{
+  "header": [
+    {
+      "detail": {
+        "type": "",//类别
+        "content": ""//内容
+      },
+      "coordinate": "",//坐标
+      "extensibility": {//可伸展性
+        "horizontal": true,//横向
+        "vertical": true//纵向
+      },
+      "style" : {
+        "width" : "",
+        "height" : "",
+        "border" : "",
+        "font" : "",
+        "background-color" : ""
+      }//样式
+    }
+  ],
+  "body": [
+    {}
+  ]
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet"
+          href="https://docs.handsontable.com/pro/1.10.0/bower_components/handsontable-pro/dist/handsontable.full.min.css">
+</head>
+<body>
+<div id="example1" class="hot handsontable htRowHeaders htColumnHeaders"
+     style="height: 320px; overflow: hidden; width: 584px;"
+     data-originalstyle="height: 320px; overflow: hidden; width: 584px;"></div>
+</body>
+</html>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script src="https://docs.handsontable.com/pro/1.10.0/bower_components/handsontable-pro/dist/handsontable.full.min.js"></script>
+<script>
+    var container = /*document.getElementById('example1')*/$("#example1")[0],
+            hot;
+    hot = new Handsontable(container, {
+        data: Handsontable.helper.createSpreadsheetData(1000, 16),
+        colWidths: [47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47], // can also be a number or a function
+        rowHeaders: true,
+        colHeaders: true,
+        contextMenu: true,
+        mergeCells: [
+            {row: 0, col: 0, rowspan: 3, colspan: 3},
+            {row: 3, col: 4, rowspan: 2, colspan: 2}
+        ],
+        contextMenu : true
+    });
+</script>
