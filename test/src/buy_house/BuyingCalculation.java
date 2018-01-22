@@ -4,6 +4,7 @@ import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.parser.PdfTextExtractor;
 import com.xiaoleilu.hutool.util.StrUtil;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,6 +16,10 @@ import java.util.regex.Pattern;
  * @date: 2018\1\22 0022 9:52
  */
 public class BuyingCalculation {
+    /**
+     * pdf文件路径
+     */
+    private String pdfFilePath;
 
     /**
      * 第一天摇中选房总人数
@@ -30,19 +35,41 @@ public class BuyingCalculation {
     private int k = 0;
 
     /**
-     * 第一天资料复核过总人数
+     * 第一天资料复核通过总人数
      */
     private int totalNum1;
 
     /**
-     * 第二天资料复核过总人数
+     * 第二天资料复核通过总人数
      */
     private int totalNum2;
 
     /**
-     * 第三天资料复核过总人数
+     * 第三天资料复核通过总人数
      */
     private int totalNum3;
+
+    /**
+     * 除去去棚改，普通选房共有多少套
+     */
+    private int totalHouseNumber;
+
+
+    public String getPdfFilePath() {
+        return pdfFilePath;
+    }
+
+    public void setPdfFilePath(String pdfFilePath) {
+        this.pdfFilePath = pdfFilePath;
+    }
+
+    public int getTotalHouseNumber() {
+        return totalHouseNumber;
+    }
+
+    public void setTotalHouseNumber(int totalHouseNumber) {
+        this.totalHouseNumber = totalHouseNumber;
+    }
 
     private String startNum_1;
 
@@ -128,14 +155,26 @@ public class BuyingCalculation {
         this.endNum_3 = endNum_3;
     }
 
-    public void readPdfFile(String pdfPath) {
+    private String fileName;
+
+
+    /**
+     * 读取摇号结果pdf文件
+     *
+     * @date: 2018\1\22 0022 16:41
+     */
+    public void readPdfFile() {
         PdfReader reader = null;
+        File file = null;
 
         try {
-            reader = new PdfReader(pdfPath);
+            reader = new PdfReader(pdfFilePath);
+            file = new File(pdfFilePath);
+            this.fileName = file.getName().replaceAll(".pdf", "");
+
             // 获得页数
             int num = reader.getNumberOfPages();
-            System.out.println("Total Page: " + num);
+            System.out.println("文件一共: " + num + "页");
 
             // 存放读取出的文档内容
             String content = "";
@@ -177,12 +216,12 @@ public class BuyingCalculation {
                 String[] arr = str.split(" ");
                 int flag = Integer.valueOf(arr[0]);
                 int num = Integer.valueOf(arr[1].replace("B", ""));
-                if (flag <= 404) {
+                if (flag <= totalHouseNumber) {
                     if (num >= 0001 && num <= totalNum1) {
                         i += 1;
-                    } else if (num >= totalNum1 && num <= totalNum2) {
+                    } else if (num > totalNum1 && num <= totalNum2) {
                         j += 1;
-                    } else if (num >= totalNum2 && num <= totalNum3) {
+                    } else if (num > totalNum2 && num <= totalNum3) {
                         k += 1;
                     } else {
 
@@ -192,10 +231,10 @@ public class BuyingCalculation {
         }
     }
 
-    public void calculateProbability(int num) {
-        System.out.println("第一天报名被选中的有" + i + "人，选中概率为" + ((double) i / num));
-        System.out.println("第二天报名被选中的有" + j + "人，选中概率为" + ((double) j / num));
-        System.out.println("第三天报名被选中的有" + k + "人，选中概率为" + ((double) k / num));
+    public void calculateProbability() {
+        System.out.println(this.fileName + "：第一天报名被选中的有" + i + "人，选中概率为" + ((double) i / totalHouseNumber));
+        System.out.println(this.fileName + "：第二天报名被选中的有" + j + "人，选中概率为" + ((double) j / totalHouseNumber));
+        System.out.println(this.fileName + "：第三天报名被选中的有" + k + "人，选中概率为" + ((double) k / totalHouseNumber));
     }
 
 }

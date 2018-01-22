@@ -64,8 +64,9 @@ public class JobTest extends TestCase {
 
     @Test
     public void testBeiHu() throws Exception {
-        String filePath = "C:\\Users\\Administrator\\Desktop\\北湖国际城普通选房摇号结果.pdf";
+        String filePath = "C:\\Users\\Administrator\\Desktop\\摇号结果\\北湖国际城普通选房摇号结果.pdf";
         BuyingCalculation buyingCalculation = new BuyingCalculation();
+        buyingCalculation.setPdfFilePath(filePath);
         buyingCalculation.setStartNum_1("B0001");
         buyingCalculation.setEndNum_1("B1671");
         buyingCalculation.setStartNum_2("B1672");
@@ -77,17 +78,20 @@ public class JobTest extends TestCase {
         buyingCalculation.setTotalNum2(2521);
         buyingCalculation.setTotalNum3(3621);
 
-        buyingCalculation.readPdfFile(filePath);
+        buyingCalculation.setTotalHouseNumber(404);
+        buyingCalculation.readPdfFile();
+
         /**
          * 北湖摇号购房结果
          */
-        buyingCalculation.calculateProbability(404);
+        buyingCalculation.calculateProbability();
     }
 
     @Test
     public void testLvDiXinLiCheng() throws Exception {
-        String filePath = "C:\\Users\\Administrator\\Desktop\\绿地新里城选房顺序摇号结果.pdf";
+        String filePath = "C:\\Users\\Administrator\\Desktop\\摇号结果\\18年1月19日绿地新里城项目普通登记购房人摇号结果.pdf";
         BuyingCalculation buyingCalculation = new BuyingCalculation();
+        buyingCalculation.setPdfFilePath(filePath);
         buyingCalculation.setStartNum_1("B0001");
         buyingCalculation.setEndNum_1("B5681");
         buyingCalculation.setStartNum_2("B5682");
@@ -99,10 +103,12 @@ public class JobTest extends TestCase {
         buyingCalculation.setTotalNum2(7535);
         buyingCalculation.setTotalNum3(8995);
 
-        buyingCalculation.readPdfFile(filePath);
+        buyingCalculation.setTotalHouseNumber(724);
+
+        buyingCalculation.readPdfFile();
         /**
          * 绿地新里城摇号购房结果
          */
-        buyingCalculation.calculateProbability(724);
+        buyingCalculation.calculateProbability();
     }
 }
