@@ -6,11 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59241a67-8427-45cc-b0d7-6170d492950d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BuyingCalculation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test.java" afterPath="$PROJECT_DIR$/src/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mail/Mail.java" afterPath="$PROJECT_DIR$/src/mail/Mail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/JobTest.java" afterPath="$PROJECT_DIR$/test/JobTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BuyingCalculation.java" afterPath="$PROJECT_DIR$/src/BuyingCalculation.java" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,21 +38,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JobTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JobTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/JobTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="305">
-              <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="37" />
-              <folding />
+              <caret line="65" column="23" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="37" />
+              <folding>
+                <element signature="method#testSendMail#0;class#JobTest#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuyingCalculation.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BuyingCalculation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BuyingCalculation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+            <state relative-caret-position="116">
+              <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -777,8 +776,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.JobTest.testBuyingCalculation" />
-        <item index="1" class="java.lang.String" itemvalue="Application.BuyingCalculation" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.JobTest.testSendMail" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JobTest.testSendMail" />
+        <item index="2" class="java.lang.String" itemvalue="Application.BuyingCalculation" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.JobTest.testThread" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.JobTest.threadTest" />
       </list>
@@ -920,7 +919,7 @@
       <workItem from="1514958254623" duration="1632000" />
       <workItem from="1515118166525" duration="1385000" />
       <workItem from="1515721736944" duration="7732000" />
-      <workItem from="1516585555284" duration="3572000" />
+      <workItem from="1516585555284" duration="5077000" />
     </task>
     <task id="LOCAL-00001" summary="delete unused files">
       <created>1514347059827</created>
@@ -936,43 +935,50 @@
       <option name="project" value="LOCAL" />
       <updated>1514347142040</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="读取PDF文件">
+      <created>1516589276112</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1516589276112</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 10h 23m 57s.xml">
+    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 10h 59m 48s.xml">
       <configuration name="JobTest.testBuyingCalculation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 10h 25m 26s.xml">
+    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 10h 59m 58s.xml">
       <configuration name="JobTest.testBuyingCalculation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 10h 26m 40s.xml">
+    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 11h 01m 49s.xml">
       <configuration name="JobTest.testBuyingCalculation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 10h 29m 33s.xml">
+    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 11h 03m 37s.xml">
       <configuration name="JobTest.testBuyingCalculation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 10h 42m 54s.xml">
+    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 11h 04m 23s.xml">
       <configuration name="JobTest.testBuyingCalculation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 10h 46m 43s.xml">
+    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 11h 08m 23s.xml">
       <configuration name="JobTest.testBuyingCalculation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 10h 46m 53s.xml">
+    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 11h 08m 40s.xml">
       <configuration name="JobTest.testBuyingCalculation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testThread - 2017.12.22 at 17h 26m 57s.xml">
-      <configuration name="JobTest.testThread" configurationId="JUnit" />
+    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 11h 10m 58s.xml">
+      <configuration name="JobTest.testBuyingCalculation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testThread - 2017.12.22 at 17h 27m 00s.xml">
-      <configuration name="JobTest.testThread" configurationId="JUnit" />
+    <history-entry file="JobTest_testBuyingCalculation - 2018.01.22 at 11h 11m 08s.xml">
+      <configuration name="JobTest.testBuyingCalculation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_threadTest - 2017.12.22 at 17h 25m 24s.xml">
-      <configuration name="JobTest.threadTest" configurationId="JUnit" />
+    <history-entry file="JobTest_testSendMail - 2018.01.22 at 11h 03m 57s.xml">
+      <configuration name="JobTest.testSendMail" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256235000" />
+    <option name="totallyTimeSpent" value="257740000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1010,7 +1016,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7135843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67757773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1036,7 +1042,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete unused files" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete unused files" />
+    <MESSAGE value="读取PDF文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="读取PDF文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1059,17 +1066,11 @@
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BuyingCalculation.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="61" />
+      <option name="time" value="67" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1078,24 +1079,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/wechat/service/TokenService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/wechat/model/TextMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/software/java/jdk1.8/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1329,6 +1316,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1381,12 +1369,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BuyingCalculation.java">
+    <entry file="jar://D:/jar/itextpdf-5.5.11.jar!/com/itextpdf/text/pdf/parser/PdfTextExtractor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        <state relative-caret-position="288">
+          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/software/java/jdk1.8/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="2420" column="11" lean-forward="true" selection-start-line="2420" selection-start-column="11" selection-end-line="2420" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#94598#94599#0" expanded="false" />
+            <element signature="e#94636#94637#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1394,8 +1391,20 @@
     <entry file="file://$PROJECT_DIR$/test/JobTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
-          <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="37" />
-          <folding />
+          <caret line="65" column="23" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="37" />
+          <folding>
+            <element signature="method#testSendMail#0;class#JobTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BuyingCalculation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
