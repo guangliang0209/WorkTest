@@ -8,7 +8,6 @@
     <list default="true" id="59241a67-8427-45cc-b0d7-6170d492950d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/buy_house/BuyingCalculation.java" afterPath="$PROJECT_DIR$/src/buy_house/BuyingCalculation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/JobTest.java" afterPath="$PROJECT_DIR$/test/JobTest.java" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JobTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JobTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/JobTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="96" column="49" lean-forward="true" selection-start-line="96" selection-start-column="49" selection-end-line="96" selection-end-column="49" />
+            <state relative-caret-position="494">
+              <caret line="102" column="45" lean-forward="true" selection-start-line="102" selection-start-column="45" selection-end-line="102" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#testSql#0;class#JobTest#0" expanded="false" />
@@ -54,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuyingCalculation.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BuyingCalculation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/buy_house/BuyingCalculation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="236" column="45" lean-forward="false" selection-start-line="236" selection-start-column="45" selection-end-line="236" selection-end-column="45" />
+            <state relative-caret-position="105">
+              <caret line="212" column="7" lean-forward="true" selection-start-line="212" selection-start-column="7" selection-end-line="212" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#896#897#0" expanded="true" />
@@ -940,7 +939,7 @@
       <workItem from="1514958254623" duration="1632000" />
       <workItem from="1515118166525" duration="1385000" />
       <workItem from="1515721736944" duration="7732000" />
-      <workItem from="1516585555284" duration="22593000" />
+      <workItem from="1516585555284" duration="22934000" />
     </task>
     <task id="LOCAL-00001" summary="delete unused files">
       <created>1514347059827</created>
@@ -977,7 +976,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516609813675</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="计算三天网上报名被摇到的概率">
+      <created>1516613048785</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1516613048785</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1013,7 +1019,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275256000" />
+    <option name="totallyTimeSpent" value="275597000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1078,7 +1084,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete unused files" />
     <MESSAGE value="读取PDF文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="读取PDF文件" />
+    <MESSAGE value="计算三天网上报名被摇到的概率" />
+    <option name="LAST_COMMIT_MESSAGE" value="计算三天网上报名被摇到的概率" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1427,10 +1434,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/JobTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="102" column="45" lean-forward="true" selection-start-line="102" selection-start-column="45" selection-end-line="102" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testSql#0;class#JobTest#0" expanded="false" />
+            <element signature="method#testThread#0;class#JobTest#0" expanded="false" />
+            <element signature="method#testSendMail#0;class#JobTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/buy_house/BuyingCalculation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="236" column="45" lean-forward="false" selection-start-line="236" selection-start-column="45" selection-end-line="236" selection-end-column="45" />
+        <state relative-caret-position="105">
+          <caret line="212" column="7" lean-forward="true" selection-start-line="212" selection-start-column="7" selection-end-line="212" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#896#897#0" expanded="true" />
@@ -1441,19 +1461,6 @@
             <element signature="e#1109#1110#0" expanded="true" />
             <element signature="e#1170#1171#0" expanded="true" />
             <element signature="e#1226#1227#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/JobTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="96" column="49" lean-forward="true" selection-start-line="96" selection-start-column="49" selection-end-line="96" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#testSql#0;class#JobTest#0" expanded="false" />
-            <element signature="method#testThread#0;class#JobTest#0" expanded="false" />
-            <element signature="method#testSendMail#0;class#JobTest#0" expanded="false" />
           </folding>
         </state>
       </provider>

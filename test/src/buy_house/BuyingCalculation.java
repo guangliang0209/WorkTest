@@ -155,6 +155,9 @@ public class BuyingCalculation {
         this.endNum_3 = endNum_3;
     }
 
+    /**
+     * 文件名
+     */
     private String fileName;
 
 
@@ -214,8 +217,8 @@ public class BuyingCalculation {
             Matcher m = p.matcher(str);
             if (!m.find()) {
                 String[] arr = str.split(" ");
-                int flag = Integer.valueOf(arr[0]);
-                int num = Integer.valueOf(arr[1].replace("B", ""));
+                int flag = Integer.valueOf(arr[0]); // 选房顺序号
+                int num = Integer.valueOf(arr[1].replace("B", "")); // 公正摇号编号
                 if (flag <= totalHouseNumber) {
                     if (num >= 0001 && num <= totalNum1) {
                         i += 1;
