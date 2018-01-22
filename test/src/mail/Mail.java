@@ -55,13 +55,13 @@ public class Mail {
      */
     private void setPros() {
         pros = new Properties();
-        pros.setProperty("mail.smtp.host", "smtp.126.com");
+        pros.setProperty("mail.smtp.host", "smtp.ouc.edu.cn");
         pros.setProperty("mail.smtp.auth", "true");
         pros.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
         pros.setProperty("mail.smtp.port", "25");
         pros.setProperty("mail.smtp.socketFactory.port", "25");
-        username = "fengguangliang520@126.com";
-        password = "comsys1234";
+        username = "szhxy@ouc.edu.cn";
+        password = "66782163oucnc";
     }
 
     /**

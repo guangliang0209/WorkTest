@@ -1,18 +1,6 @@
-import com.alibaba.fastjson.JSONObject;
-import gexin.AppPush;
-import mail.Mail;
-import wechat.model.AccessToken;
-import wechat.model.NewsMessage;
-import wechat.model.TextMessage;
 import wechat.service.SendWechatMsgService;
-import wechat.service.impl.ContactsGroupServiceImpl;
-import wechat.service.impl.ContactsPersonServiceImpl;
 import wechat.service.impl.SendWechatMsgServiceImpl;
 import wechat.service.impl.TokenServiceImpl;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 /**
  * Created by fengguangliang on 2016/5/10.
@@ -89,14 +77,7 @@ public class Test {
 
             System.out.println(second);*/
 
-            /*String email = "hubibo@comsys.net.cn";
-            Mail mail = new Mail();
-            mail.setRecipient(email);
-            mail.setSubject("title");
-            mail.setDate(new Date());
-            mail.setFrom("rabbit");
-            mail.setContent("账号信息正确性测试", "text/html; charset=utf-8");
-            mail.sendMessage();*/
+
 
             /*String appId = "4xSUZgaviiAQU3sxo5qLU5";
             String appKey = "VLZlGmZA2d9tbQipMChqiA";

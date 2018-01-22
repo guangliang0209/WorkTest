@@ -1,6 +1,8 @@
 import junit.framework.TestCase;
+import mail.Mail;
 
 import java.util.Arrays;
+import java.util.Date;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -46,5 +48,24 @@ public class JobTest extends TestCase{
         }
 
         System.out.println("count = " + count);
+    }
+
+    @Test
+    public void testSendMail() throws Exception {
+        String email = "fengguangliang@comsys.net.cn";
+        Mail mail = new Mail();
+        mail.setRecipient(email);
+        mail.setSubject("title");
+        mail.setDate(new Date());
+        mail.setFrom("rabbit");
+        mail.setContent("sdbsdgbdsfgbsfgbsdfb", "text/html; charset=utf-8");
+        mail.sendMessage();
+    }
+
+    @Test
+    public void testBuyingCalculation() throws Exception {
+        String filePath = "C:\\Users\\Administrator\\Desktop\\北湖国际城普通选房摇号结果.pdf";
+        BuyingCalculation buyingCalculation = new BuyingCalculation();
+        buyingCalculation.readPdfFile(filePath);
     }
 }
