@@ -74,9 +74,9 @@ public class JobTest extends TestCase {
         buyingCalculation.setStartNum_3("B2522");
         buyingCalculation.setEndNum_3("B3621");
 
-        buyingCalculation.setTotalNum1(1671);
-        buyingCalculation.setTotalNum2(2521);
-        buyingCalculation.setTotalNum3(3621);
+        buyingCalculation.setEndNum1(1671);
+        buyingCalculation.setEndNum2(2521);
+        buyingCalculation.setEndNum3(3621);
 
         buyingCalculation.setTotalHouseNumber(404);
         buyingCalculation.readPdfFile();
@@ -99,9 +99,9 @@ public class JobTest extends TestCase {
         buyingCalculation.setStartNum_3("B7536");
         buyingCalculation.setEndNum_3("B8995");
 
-        buyingCalculation.setTotalNum1(5681);
-        buyingCalculation.setTotalNum2(7535);
-        buyingCalculation.setTotalNum3(8995);
+        buyingCalculation.setEndNum1(5681);
+        buyingCalculation.setEndNum2(7535);
+        buyingCalculation.setEndNum3(8995);
 
         buyingCalculation.setTotalHouseNumber(724);
 

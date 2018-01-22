@@ -37,17 +37,17 @@ public class BuyingCalculation {
     /**
      * 第一天资料复核通过总人数
      */
-    private int totalNum1;
+    private int endNum1;
 
     /**
      * 第二天资料复核通过总人数
      */
-    private int totalNum2;
+    private int endNum2;
 
     /**
      * 第三天资料复核通过总人数
      */
-    private int totalNum3;
+    private int endNum3;
 
     /**
      * 除去去棚改，普通选房共有多少套
@@ -83,28 +83,28 @@ public class BuyingCalculation {
 
     private String endNum_3;
 
-    public int getTotalNum1() {
-        return totalNum1;
+    public int getEndNum1() {
+        return endNum1;
     }
 
-    public void setTotalNum1(int totalNum1) {
-        this.totalNum1 = totalNum1;
+    public void setEndNum1(int endNum1) {
+        this.endNum1 = endNum1;
     }
 
-    public int getTotalNum2() {
-        return totalNum2;
+    public int getEndNum2() {
+        return endNum2;
     }
 
-    public void setTotalNum2(int totalNum2) {
-        this.totalNum2 = totalNum2;
+    public void setEndNum2(int endNum2) {
+        this.endNum2 = endNum2;
     }
 
-    public int getTotalNum3() {
-        return totalNum3;
+    public int getEndNum3() {
+        return endNum3;
     }
 
-    public void setTotalNum3(int totalNum3) {
-        this.totalNum3 = totalNum3;
+    public void setEndNum3(int endNum3) {
+        this.endNum3 = endNum3;
     }
 
     public String getStartNum_1() {
@@ -220,11 +220,11 @@ public class BuyingCalculation {
                 int flag = Integer.valueOf(arr[0]); // 选房顺序号
                 int num = Integer.valueOf(arr[1].replace("B", "")); // 公正摇号编号
                 if (flag <= totalHouseNumber) {
-                    if (num >= 0001 && num <= totalNum1) {
+                    if (num >= 0001 && num <= endNum1) {
                         i += 1;
-                    } else if (num > totalNum1 && num <= totalNum2) {
+                    } else if (num > endNum1 && num <= endNum2) {
                         j += 1;
-                    } else if (num > totalNum2 && num <= totalNum3) {
+                    } else if (num > endNum2 && num <= endNum3) {
                         k += 1;
                     } else {
 
