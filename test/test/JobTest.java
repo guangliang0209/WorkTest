@@ -1,3 +1,4 @@
+import buy_house.BuyingCalculation;
 import junit.framework.TestCase;
 import mail.Mail;
 
@@ -5,18 +6,17 @@ import java.util.Arrays;
 import java.util.Date;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 /**
  * Created by Administrator on 2017\11\28 0028.
  */
-public class JobTest extends TestCase{
+public class JobTest extends TestCase {
     private volatile static int count = 0;
 
     @Test
     public void testSql() throws Exception {
-        int[] i = {1,2,3,4,5};
-        int result =   Arrays.binarySearch(i, 10);
+        int[] i = {1, 2, 3, 4, 5};
+        int result = Arrays.binarySearch(i, 10);
         System.out.println(result);
     }
 
@@ -63,9 +63,46 @@ public class JobTest extends TestCase{
     }
 
     @Test
-    public void testBuyingCalculation() throws Exception {
+    public void testBeiHu() throws Exception {
         String filePath = "C:\\Users\\Administrator\\Desktop\\北湖国际城普通选房摇号结果.pdf";
         BuyingCalculation buyingCalculation = new BuyingCalculation();
+        buyingCalculation.setStartNum_1("B0001");
+        buyingCalculation.setEndNum_1("B1671");
+        buyingCalculation.setStartNum_2("B1672");
+        buyingCalculation.setEndNum_2("B2521");
+        buyingCalculation.setStartNum_3("B2522");
+        buyingCalculation.setEndNum_3("B3621");
+
+        buyingCalculation.setTotalNum1(1671);
+        buyingCalculation.setTotalNum2(2521);
+        buyingCalculation.setTotalNum3(3621);
+
         buyingCalculation.readPdfFile(filePath);
+        /**
+         * 北湖摇号购房结果
+         */
+        buyingCalculation.calculateProbability(404);
+    }
+
+    @Test
+    public void testLvDiXinLiCheng() throws Exception {
+        String filePath = "C:\\Users\\Administrator\\Desktop\\绿地新里城选房顺序摇号结果.pdf";
+        BuyingCalculation buyingCalculation = new BuyingCalculation();
+        buyingCalculation.setStartNum_1("B0001");
+        buyingCalculation.setEndNum_1("B5681");
+        buyingCalculation.setStartNum_2("B5682");
+        buyingCalculation.setEndNum_2("B7535");
+        buyingCalculation.setStartNum_3("B7536");
+        buyingCalculation.setEndNum_3("B8995");
+
+        buyingCalculation.setTotalNum1(5681);
+        buyingCalculation.setTotalNum2(7535);
+        buyingCalculation.setTotalNum3(8995);
+
+        buyingCalculation.readPdfFile(filePath);
+        /**
+         * 绿地新里城摇号购房结果
+         */
+        buyingCalculation.calculateProbability(724);
     }
 }
