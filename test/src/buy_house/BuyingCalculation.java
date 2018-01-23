@@ -235,9 +235,13 @@ public class BuyingCalculation {
     }
 
     public void calculateProbability() {
-        System.out.println(this.fileName + "：第一天报名被选中的有" + i + "人，选中概率为" + ((double) i / totalHouseNumber));
-        System.out.println(this.fileName + "：第二天报名被选中的有" + j + "人，选中概率为" + ((double) j / totalHouseNumber));
-        System.out.println(this.fileName + "：第三天报名被选中的有" + k + "人，选中概率为" + ((double) k / totalHouseNumber));
+        System.out.println(this.fileName + "楼盘共" + this.totalHouseNumber + "套房");
+        System.out.println("第一天报名资料复核通过共" + (this.endNum1) + "人" + "，被选中的有" + i + "人");
+        System.out.println("第二天报名资料复核通过共" + (this.endNum2 - this.endNum1) + "人" + "，被选中的有" + j + "人");
+        System.out.println("第三天报名资料复核通过共" + (this.endNum3 - this.endNum2) + "人" + "，被选中的有" + k + "人");
+        System.out.println("第一天概率为：" + ((double) i / this.endNum1));
+        System.out.println("第二天概率为：" + ((double) j / (this.endNum2 - this.endNum1)));
+        System.out.println("第三天概率为：" + ((double) k / (this.endNum3 - this.endNum2)));
     }
 
 }

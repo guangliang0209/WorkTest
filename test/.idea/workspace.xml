@@ -6,9 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59241a67-8427-45cc-b0d7-6170d492950d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/echarts/china.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/echarts/chinaMap.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/echarts/echarts.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/echarts/jquery-3.2.1.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/buy_house/BuyingCalculation.java" afterPath="$PROJECT_DIR$/src/buy_house/BuyingCalculation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/JobTest.java" afterPath="$PROJECT_DIR$/test/JobTest.java" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,37 +42,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JobTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/JobTest.java">
+      <file leaf-file-name="chinaMap.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/echarts/chinaMap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="74" column="47" lean-forward="true" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#testSql#0;class#JobTest#0" expanded="false" />
-                <element signature="method#testThread#0;class#JobTest#0" expanded="false" />
-                <element signature="method#testSendMail#0;class#JobTest#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuyingCalculation.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/buy_house/BuyingCalculation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="211" column="34" lean-forward="true" selection-start-line="211" selection-start-column="34" selection-end-line="211" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
-                <element signature="e#924#925#0" expanded="true" />
-                <element signature="e#978#979#0" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#1064#1065#0" expanded="true" />
-                <element signature="e#1103#1104#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-                <element signature="e#1220#1221#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="336">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,7 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/mail/CheckEmailValidityUtil.java" />
         <option value="D:/jar/mail.jar!/javax/mail/Transport.class" />
         <option value="$PROJECT_DIR$/src/mail/MailTest.java" />
         <option value="$PROJECT_DIR$/src/factory/Car.java" />
@@ -150,6 +127,7 @@
         <option value="$PROJECT_DIR$/src/buy_house/ExtractPicFromPdf.java" />
         <option value="$PROJECT_DIR$/test/JobTest.java" />
         <option value="$PROJECT_DIR$/src/buy_house/BuyingCalculation.java" />
+        <option value="$PROJECT_DIR$/js/echarts/chinaMap.html" />
       </list>
     </option>
   </component>
@@ -212,6 +190,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -248,7 +227,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,11 +241,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="buy_house" />
+              <option name="myItemId" value="echarts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -274,7 +253,6 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,15 +271,15 @@
     <property name="js-jscs-nodeInterpreter" value="D:\software\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\intellij_work\test\js\textext\jquery-textext-master" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\intellij_work\test\js" />
       <recent name="D:\intellij_work\test\js\textext\jquery-textext" />
       <recent name="D:\intellij_work\test\src\work" />
       <recent name="D:\intellij_work\test\src\factory\product" />
       <recent name="D:\intellij_work\test\src\mail" />
-      <recent name="D:\intellij_work\test\js\textext" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\intellij_work\test\js\textext\jquery-textext-master" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -940,7 +918,9 @@
       <workItem from="1514958254623" duration="1632000" />
       <workItem from="1515118166525" duration="1385000" />
       <workItem from="1515721736944" duration="7732000" />
-      <workItem from="1516585555284" duration="23376000" />
+      <workItem from="1516585555284" duration="26026000" />
+      <workItem from="1516624083756" duration="1404000" />
+      <workItem from="1516691068794" duration="421000" />
     </task>
     <task id="LOCAL-00001" summary="delete unused files">
       <created>1514347059827</created>
@@ -991,24 +971,19 @@
       <option name="project" value="LOCAL" />
       <updated>1516613319904</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="计算三天网上报名被摇到的概率">
+      <created>1516613765503</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1516613765503</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JobTest_testBeiHu - 2018.01.22 at 16h 54m 41s.xml">
+    <history-entry file="JobTest_testBeiHu - 2018.01.22 at 20h 31m 51s.xml">
       <configuration name="JobTest.testBeiHu" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JobTest_testBeiHu - 2018.01.22 at 17h 32m 39s.xml">
-      <configuration name="JobTest.testBeiHu" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JobTest_testBeiHu - 2018.01.22 at 17h 32m 56s.xml">
-      <configuration name="JobTest.testBeiHu" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 16h 38m 44s.xml">
-      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 16h 48m 41s.xml">
-      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
     </history-entry>
     <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 16h 51m 14s.xml">
       <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
@@ -1025,9 +1000,21 @@
     <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 17h 21m 26s.xml">
       <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 17h 44m 16s.xml">
+      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 17h 54m 47s.xml">
+      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 20h 29m 14s.xml">
+      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 20h 31m 03s.xml">
+      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276039000" />
+    <option name="totallyTimeSpent" value="280514000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1045,21 +1032,19 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5155483" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44189852" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.90507364" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63502455" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67320263" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16868381" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="573" y="58" width="220" height="612" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17473525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="573" y="58" width="220" height="612" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50980395" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1072,7 +1057,9 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38398692" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5155483" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50980395" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1129,20 +1116,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/jar/mail.jar!/javax/mail/internet/InternetAddress.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="335" column="36" lean-forward="false" selection-start-line="335" selection-start-column="36" selection-end-line="335" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/software/java/jdk1.8/src.zip!/java/net/URLEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450">
-          <caret line="164" column="25" lean-forward="false" selection-start-line="164" selection-start-column="25" selection-end-line="164" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/wechat/service/impl/ContactsPersonServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -1323,7 +1296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1348,31 +1320,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="120" column="24" lean-forward="false" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/jar/pdfbox-2.0.8.jar!/org/apache/pdfbox/pdfparser/PDFParser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/java 读取PDF文件中的内容/StreamDemo_18.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/jar/pdfbox-2.0.8.jar!/org/apache/pdfbox/pdfparser/PDFParser.class" />
+    <entry file="file://$USER_HOME$/Downloads/java 读取PDF文件中的内容/StreamDemo_18.java" />
     <entry file="jar://D:/jar/junit-4.11.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1380,7 +1336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1388,7 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-57">
           <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,7 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="169" column="13" lean-forward="false" selection-start-line="169" selection-start-column="13" selection-end-line="169" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,7 +1357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="2938" column="25" lean-forward="false" selection-start-line="2938" selection-start-column="25" selection-end-line="2938" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1412,7 +1364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="347" column="32" lean-forward="false" selection-start-line="347" selection-start-column="32" selection-end-line="347" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1420,7 +1371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
           <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1428,9 +1378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1438,14 +1385,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="3384" column="18" lean-forward="false" selection-start-line="3384" selection-start-column="18" selection-end-line="3384" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/JobTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="74" column="47" lean-forward="true" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
+        <state relative-caret-position="21">
+          <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#testSql#0;class#JobTest#0" expanded="false" />
@@ -1457,19 +1403,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/buy_house/BuyingCalculation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="211" column="34" lean-forward="true" selection-start-line="211" selection-start-column="34" selection-end-line="211" selection-end-column="34" />
+        <state relative-caret-position="347">
+          <caret line="243" column="81" lean-forward="false" selection-start-line="243" selection-start-column="81" selection-end-line="243" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1064#1065#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1220#1221#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/echarts/china.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/echarts/chinaMap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
