@@ -6,12 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59241a67-8427-45cc-b0d7-6170d492950d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/echarts/china.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/echarts/chinaMap.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/echarts/echarts.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/echarts/jquery-3.2.1.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data.json" afterPath="$PROJECT_DIR$/js/data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/echarts/chinaMap.html" afterPath="$PROJECT_DIR$/js/echarts/chinaMap.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/buy_house/BuyingCalculation.java" afterPath="$PROJECT_DIR$/src/buy_house/BuyingCalculation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/JobTest.java" afterPath="$PROJECT_DIR$/test/JobTest.java" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,12 +41,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="chinaMap.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/echarts/chinaMap.html">
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="21">
+              <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuyingCalculation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/buy_house/BuyingCalculation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3759">
+              <caret line="230" column="51" lean-forward="false" selection-start-line="230" selection-start-column="51" selection-end-line="230" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JobTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/JobTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="139" column="33" lean-forward="true" selection-start-line="139" selection-start-column="33" selection-end-line="139" selection-end-column="33" />
+              <folding>
+                <element signature="e#3696#3704#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,6 +87,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>version</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -77,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="D:/jar/mail.jar!/javax/mail/Transport.class" />
         <option value="$PROJECT_DIR$/src/mail/MailTest.java" />
         <option value="$PROJECT_DIR$/src/factory/Car.java" />
         <option value="$PROJECT_DIR$/src/factory/Bmw.java" />
@@ -101,7 +126,6 @@
         <option value="$PROJECT_DIR$/src/CommonUtil.java" />
         <option value="$PROJECT_DIR$/src/CommonUtils.java" />
         <option value="$PROJECT_DIR$/js/test.html" />
-        <option value="$PROJECT_DIR$/js/data.json" />
         <option value="$PROJECT_DIR$/src/wechat/service/impl/SendWechatMsgServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/wechat/model/NewsMessage.java" />
         <option value="$PROJECT_DIR$/src/annotation/TestAnnotation.java" />
@@ -125,9 +149,11 @@
         <option value="$PROJECT_DIR$/src/BuyingCalculation.java" />
         <option value="$PROJECT_DIR$/src/buy_house/Test.java" />
         <option value="$PROJECT_DIR$/src/buy_house/ExtractPicFromPdf.java" />
-        <option value="$PROJECT_DIR$/test/JobTest.java" />
-        <option value="$PROJECT_DIR$/src/buy_house/BuyingCalculation.java" />
+        <option value="$PROJECT_DIR$/js/echarts/echarts.min.js" />
         <option value="$PROJECT_DIR$/js/echarts/chinaMap.html" />
+        <option value="$PROJECT_DIR$/src/buy_house/BuyingCalculation.java" />
+        <option value="$PROJECT_DIR$/js/data.json" />
+        <option value="$PROJECT_DIR$/test/JobTest.java" />
       </list>
     </option>
   </component>
@@ -191,6 +217,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -227,7 +255,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="buy_house" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -244,15 +290,9 @@
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="echarts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,28 +334,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JobTest.testBeiHu">
-    <configuration default="false" name="JobTest.testSendMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JobTest" />
-      <option name="METHOD_NAME" value="testSendMail" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.JobTest.testList">
     <configuration default="false" name="JobTest.testBuyingCalculation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="test" />
@@ -397,6 +416,27 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="test" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="JobTest.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JobTest" />
+      <option name="METHOD_NAME" value="testList" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -766,19 +806,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.JobTest.testSendMail" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.JobTest.testBuyingCalculation" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.JobTest.testBeiHu" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JobTest.testLvDiXinLiCheng" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ExtractPicFromPdf" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.JobTest.testBuyingCalculation" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.JobTest.testBeiHu" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.JobTest.testLvDiXinLiCheng" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ExtractPicFromPdf" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.JobTest.testList" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JobTest.testBeiHu" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.JobTest.testLvDiXinLiCheng" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ExtractPicFromPdf" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.JobTest.testBuyingCalculation" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.JobTest.testSendMail" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.JobTest.testList" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JobTest.testBeiHu" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.JobTest.testLvDiXinLiCheng" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ExtractPicFromPdf" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.JobTest.testBuyingCalculation" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -920,7 +960,13 @@
       <workItem from="1515721736944" duration="7732000" />
       <workItem from="1516585555284" duration="26026000" />
       <workItem from="1516624083756" duration="1404000" />
-      <workItem from="1516691068794" duration="421000" />
+      <workItem from="1516691068794" duration="4912000" />
+      <workItem from="1516709203947" duration="601000" />
+      <workItem from="1516764538191" duration="604000" />
+      <workItem from="1516798013278" duration="958000" />
+      <workItem from="1516841817408" duration="3230000" />
+      <workItem from="1516865609632" duration="2426000" />
+      <workItem from="1517301746621" duration="1337000" />
     </task>
     <task id="LOCAL-00001" summary="delete unused files">
       <created>1514347059827</created>
@@ -978,27 +1024,31 @@
       <option name="project" value="LOCAL" />
       <updated>1516613765503</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="echarts地图插件">
+      <created>1516691531103</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1516691531103</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JobTest_testBeiHu - 2018.01.22 at 20h 31m 51s.xml">
+    <history-entry file="JobTest_testBeiHu - 2018.01.25 at 09h 05m 12s.xml">
       <configuration name="JobTest.testBeiHu" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 16h 51m 14s.xml">
-      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
+    <history-entry file="JobTest_testBeiHu - 2018.01.25 at 09h 07m 00s.xml">
+      <configuration name="JobTest.testBeiHu" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 16h 55m 21s.xml">
-      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
+    <history-entry file="JobTest_testList - 2018.01.25 at 09h 47m 12s.xml">
+      <configuration name="JobTest.testList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 17h 18m 16s.xml">
-      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
+    <history-entry file="JobTest_testList - 2018.01.25 at 09h 47m 38s.xml">
+      <configuration name="JobTest.testList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 17h 20m 52s.xml">
-      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 17h 21m 26s.xml">
-      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
+    <history-entry file="JobTest_testList - 2018.01.25 at 16h 18m 26s.xml">
+      <configuration name="JobTest.testList" configurationId="JUnit" />
     </history-entry>
     <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 17h 44m 16s.xml">
       <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
@@ -1012,9 +1062,12 @@
     <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.22 at 20h 31m 03s.xml">
       <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JobTest_testLvDiXinLiCheng - 2018.01.25 at 09h 05m 48s.xml">
+      <configuration name="JobTest.testLvDiXinLiCheng" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280514000" />
+    <option name="totallyTimeSpent" value="294161000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1038,19 +1091,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44189852" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63502455" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42389524" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67320263" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17473525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="573" y="58" width="220" height="612" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19894099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="573" y="58" width="220" height="612" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5515548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.111292966" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1080,7 +1133,8 @@
     <MESSAGE value="delete unused files" />
     <MESSAGE value="读取PDF文件" />
     <MESSAGE value="计算三天网上报名被摇到的概率" />
-    <option name="LAST_COMMIT_MESSAGE" value="计算三天网上报名被摇到的概率" />
+    <MESSAGE value="echarts地图插件" />
+    <option name="LAST_COMMIT_MESSAGE" value="echarts地图插件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1103,11 +1157,17 @@
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/JobTest.java</url>
+          <line>152</line>
+          <properties />
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="74" />
+      <option name="time" value="76" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1116,13 +1176,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/wechat/service/impl/ContactsPersonServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="30" column="91" lean-forward="false" selection-start-line="30" selection-start-column="91" selection-end-line="30" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gexin/AppPush.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -1217,13 +1270,6 @@
     <entry file="file://$PROJECT_DIR$/js/test.html" />
     <entry file="file://$PROJECT_DIR$/js/newType.js" />
     <entry file="file://$PROJECT_DIR$/js/date.html" />
-    <entry file="file://$PROJECT_DIR$/js/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/wechat/model/AccessToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -1388,42 +1434,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/JobTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#testSql#0;class#JobTest#0" expanded="false" />
-            <element signature="method#testThread#0;class#JobTest#0" expanded="false" />
-            <element signature="method#testSendMail#0;class#JobTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/buy_house/BuyingCalculation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="243" column="81" lean-forward="false" selection-start-line="243" selection-start-column="81" selection-end-line="243" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/echarts/china.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1659">
+          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/echarts/echarts.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/echarts/chinaMap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="179">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/buy_house/BuyingCalculation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3759">
+          <caret line="230" column="51" lean-forward="false" selection-start-line="230" selection-start-column="51" selection-end-line="230" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/JobTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="139" column="33" lean-forward="true" selection-start-line="139" selection-start-column="33" selection-end-line="139" selection-end-column="33" />
+          <folding>
+            <element signature="e#3696#3704#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

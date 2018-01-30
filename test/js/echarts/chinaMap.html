@@ -2,11 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
     <title>ECharts-china</title>
-    <script src="./jquery-3.2.1.min.js"></script>
-    <script src="./echarts.min.js"></script>
-    <script src="./china.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="echarts.min.js"></script>
+    <script src="china.js"></script>
     <style>
         #china-map {
             width: 1000px;
@@ -20,60 +19,38 @@
 <div id="china-map"></div>
 
 <script>
-    var myChart = echarts.init(document.getElementById('china-map'));
-    var option = {
-        tooltip: { // 鼠标悬浮交互时的信息提示
-            show: true, // 显示策略，可选为：true（显示） | false（隐藏）
-            formatter: function (params, ticket, callback) {
-                console.log(params);
-                var res = 'Function formatter : <br/>' + params[0].name;
-                for (var i = 0, l = params.length; i < l; i++) {
-                    res += '<br/>' + params[i].seriesName + ' : ' + params[i].value;
-                }
-                setTimeout(function () {
-                    // 仅为了模拟异步回调
-                    callback(ticket, res);
-                }, 1000);
-                return 'loading';
-            }, //提示标签格式
-            backgroundColor: "#ff7f50",
-            textStyle: {color: "#fff"} //提示标签字体颜色
-        },
-        series: [{
-            type: 'map',
-            mapType: 'china',
-            label: {
-                normal: {
-                    show: true,//显示省份标签
-                    textStyle: {color: "#c71585"}//省份标签字体颜色
-                },
-                emphasis: {//对应的鼠标悬浮效果
-                    show: true,
-                    textStyle: {color: "#800080"}
-                }
-            },
-            itemStyle: {
-                normal: {
-                    borderWidth: .5,//区域边框宽度
-                    borderColor: '#009fe8',//区域边框颜色
-                    areaColor: "#ffefd5",//区域颜色
-                },
-                emphasis: {
-                    borderWidth: .5,
-                    borderColor: '#4b0082',
-                    areaColor: "#ffdead",
-                }
-            },
-            data: [
-                {name: '福建', selected: true}//福建为选中状态
-            ]
-        }]
-    };
 
+    var option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: '{b}'
+        },
+        series: [
+            {
+                name: '中国',
+                type: 'map',
+                mapType: 'china',
+                selectedMode: 'multiple',
+                itemStyle: { //图表内图形的默认样式和强调样式
+                    normal: {label: {show: true}},
+                    emphasis: {label: {show: true}}
+                },
+                data: [
+                    {
+                        name: '广东',
+                        value: 1234,
+                        selected: true
+                    }
+                ]
+            }
+        ]
+    };
+    var myChart = echarts.init(document.getElementById('china-map'));
     myChart.setOption(option);
-    myChart.on('mouseover', function (params) {
+
+    /*myChart.on('mouseover', function (params) {
         var dataIndex = params.dataIndex;
-    });
+    });*/
 </script>
 
 </body>

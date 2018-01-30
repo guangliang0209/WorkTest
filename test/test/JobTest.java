@@ -2,8 +2,10 @@ import buy_house.BuyingCalculation;
 import junit.framework.TestCase;
 import mail.Mail;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -110,5 +112,44 @@ public class JobTest extends TestCase {
          * 绿地新里城摇号购房结果
          */
         buyingCalculation.calculateProbability();
+    }
+
+
+    @Test
+    public void testList() throws Exception {
+        List<String> list = new ArrayList<String>();
+        list.add("JavaWeb编程词典");        //向列表中添加数据
+        list.add("Java编程词典");        //向列表中添加数据
+        list.add("C#编程词典");         //向列表中添加数据
+        list.add("ASP.NET编程词典");        //向列表中添加数据
+        list.add("VC编程词典");         //向列表中添加数据
+        list.add("SQL编程词典");
+
+        List<String> subList = list.subList(0, 3);
+        System.out.println(list);
+        System.out.println(">>>>>>>>>>>>");
+        System.out.println(subList);
+        System.out.println(">>>>>>>>>>>>");
+        System.out.println(list);
+
+        String sql = "SELECT\n" +
+                "\tt_zsjh.zymc AS major,\n" +
+                "\tCASE t_zsjh.kl\n" +
+                "WHEN 1 THEN\n" +
+                "\t'文史'\n" +
+                "WHEN 2 THEN\n" +
+                "\t'理工'\n" +
+                "END AS type,\n" +
+                " t_zsjh.bz AS remark,\n" +
+                " t_zsjh.nzrs AS num\n" +
+                "FROM\n" +
+                "\tt_zsjh\n" +
+                "LEFT JOIN dm_sf ON t_zsjh.sf = dm_sf.dm\n" +
+                "WHERE\n" +
+                "\tt_zsjh.jhfl = 1\n" +
+                "AND t_zsjh.nd = 2018\n" +
+                "AND dm_sf.mc = '四川'\n" +
+                "AND t_zsjh.zslb = 1";
+        System.out.println(sql);
     }
 }

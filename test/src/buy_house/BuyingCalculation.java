@@ -198,7 +198,7 @@ public class BuyingCalculation {
                 } else {
                     s = arr[i];
                 }
-                System.out.println(s);
+//                System.out.println(s);
                 countNumber(s);
             }
         } catch (IOException e) {
@@ -222,13 +222,17 @@ public class BuyingCalculation {
                 if (flag <= totalHouseNumber) {
                     if (num >= 0001 && num <= endNum1) {
                         i += 1;
+                        str += "                   第1天报名";
                     } else if (num > endNum1 && num <= endNum2) {
                         j += 1;
+                        str += "                   第2天报名";
                     } else if (num > endNum2 && num <= endNum3) {
                         k += 1;
+                        str += "                   第3天报名";
                     } else {
 
                     }
+                    System.out.println(str);
                 }
             }
         }
