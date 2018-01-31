@@ -133,23 +133,32 @@ public class JobTest extends TestCase {
         System.out.println(list);
 
         String sql = "SELECT\n" +
-                "\tt_zsjh.zymc AS major,\n" +
-                "\tCASE t_zsjh.kl\n" +
+                "\tzkzh,\n" +
+                "\txm,\n" +
+                "\tCASE xb\n" +
                 "WHEN 1 THEN\n" +
-                "\t'文史'\n" +
+                "\t'男'\n" +
                 "WHEN 2 THEN\n" +
-                "\t'理工'\n" +
-                "END AS type,\n" +
-                " t_zsjh.bz AS remark,\n" +
-                " t_zsjh.nzrs AS num\n" +
+                "\t'女'\n" +
+                "END AS xb,\n" +
+                " dm_sf.mc AS syd,\n" +
+                " t_ykcj.sfzjh AS sfzh,\n" +
+                " t_ykcj.ksh,\n" +
+                " t_ykzy.zymc AS bkzy,\n" +
+                " t_ykcj.zyzf,\n" +
+                " t_ykcj.zypm AS zymc,\n" +
+                " t_ykhgx.hgx\n" +
                 "FROM\n" +
-                "\tt_zsjh\n" +
-                "LEFT JOIN dm_sf ON t_zsjh.sf = dm_sf.dm\n" +
+                "\tt_ykcj\n" +
+                "LEFT JOIN dm_sf ON t_ykcj.sf = dm_sf.dm\n" +
+                "LEFT JOIN t_ykzy ON t_ykcj.bkzy = t_ykzy.id\n" +
+                "LEFT JOIN t_ykhgx ON t_ykzy.id = t_ykhgx.bkzy\n" +
+                "AND t_ykhgx.nd = t_ykcj.nd\n" +
                 "WHERE\n" +
-                "\tt_zsjh.jhfl = 1\n" +
-                "AND t_zsjh.nd = 2018\n" +
-                "AND dm_sf.mc = '四川'\n" +
-                "AND t_zsjh.zslb = 1";
+                "\tt_ykcj.nd = ?\n" +
+                "AND zkzh = ?\n" +
+                "AND SUBSTRING(sfzjh ,- 6) = ?";
         System.out.println(sql);
     }
+
 }
