@@ -2,6 +2,7 @@ import buy_house.BuyingCalculation;
 import junit.framework.TestCase;
 import mail.Mail;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -161,4 +162,9 @@ public class JobTest extends TestCase {
         System.out.println(sql);
     }
 
+    public void testDate() throws Exception {
+        Date d = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy");
+        System.out.println(format.format(d));
+    }
 }

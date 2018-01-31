@@ -2,20 +2,47 @@ package PrintSrc.com.szallcom.tools;
 
 import PrintSrc.wf.common.SystemProperties;
 
-import java.awt.*;
-import java.awt.event.*;
-
-import javax.swing.*;
-
+import java.awt.BasicStroke;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.PrintJob;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.print.PageFormat;
+import java.awt.print.Printable;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.Properties;
-import java.awt.print.*;
 
-import javax.print.*;
-import javax.print.attribute.*;
+import javax.print.Doc;
+import javax.print.DocFlavor;
+import javax.print.DocPrintJob;
+import javax.print.PrintException;
+import javax.print.PrintService;
+import javax.print.PrintServiceLookup;
+import javax.print.ServiceUI;
+import javax.print.SimpleDoc;
+import javax.print.attribute.DocAttributeSet;
+import javax.print.attribute.HashDocAttributeSet;
+import javax.print.attribute.HashPrintRequestAttributeSet;
+import javax.print.attribute.PrintRequestAttributeSet;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
-import java.io.*;
 
-public class PrintTest extends JFrame
+public class PrintHelp extends JFrame
         implements ActionListener, Printable {
     private JButton printTextButton = new JButton("Print Text");
     private JButton previewButton = new JButton("Print Preview");
@@ -31,7 +58,7 @@ public class PrintTest extends JFrame
     private int PAGES = 0;
     private String printStr;
 
-    public PrintTest() {
+    public PrintHelp() {
         this.setTitle("Print Test");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setBounds((int) ((SystemProperties.SCREEN_WIDTH - 800) / 2), (int) ((SystemProperties.SCREEN_HEIGHT - 600) / 2), 800, 600);
@@ -118,14 +145,14 @@ public class PrintTest extends JFrame
                 int tempHeight = (int) (fontHeigth1 * 2 + 50);
                 String zkzh = "准考证号：sby001";
                 g2.drawString(zkzh, (int) x + 80, (int) y + fontHeigth2 + 10 + tempHeight);
-                String xm =   "姓    名：孙彬焱";
+                String xm = "姓    名：孙彬焱";
                 g2.drawString(xm, (int) x + 80, (int) y + fontHeigth2 * 2 + 15 + tempHeight);
-                String xb =   "性    别 ：男";
-                g2.drawString(xb, (int) x + 80, (int) y + fontHeigth2 *3  + 20 + tempHeight);
-                String syd =  "生 源 地：四川";
-                g2.drawString(syd, (int) x + 80, (int) y + fontHeigth2 *4  + 25 + tempHeight);
+                String xb = "性    别 ：男";
+                g2.drawString(xb, (int) x + 80, (int) y + fontHeigth2 * 3 + 20 + tempHeight);
+                String syd = "生 源 地：四川";
+                g2.drawString(syd, (int) x + 80, (int) y + fontHeigth2 * 4 + 25 + tempHeight);
                 String sfzh = "身份证号：51110000101234";
-                g2.drawString(sfzh, (int) x + 80, (int) y + fontHeigth2 * 5  + 30 + tempHeight);
+                g2.drawString(sfzh, (int) x + 80, (int) y + fontHeigth2 * 5 + 30 + tempHeight);
                 String ksh = "考 生 号：0001";
                 g2.drawString(ksh, (int) x + 80, (int) y + fontHeigth2 * 6 + 35 + tempHeight);
                 String bkzy = "报考专业： 美术";
@@ -315,7 +342,7 @@ public class PrintTest extends JFrame
     }
 
     public static void main(String[] args) {
-        (new PrintTest()).setVisible(true);
+        (new PrintHelp()).setVisible(true);
     }
 }
 
