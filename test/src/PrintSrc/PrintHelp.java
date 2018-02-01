@@ -10,7 +10,9 @@ import java.awt.PrintJob;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.print.Book;
 import java.awt.print.PageFormat;
+import java.awt.print.Paper;
 import java.awt.print.Printable;
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
@@ -56,11 +58,36 @@ public class PrintHelp extends JFrame
     private int PAGES = 0;
     private String printStr;
 
+    private String zkzh = null;
+    private String xm = null;
+    private String xb = null;
+    private String syd = null;
+    private String sfzh = null;
+    private String ksh = null;
+    private String bkzy = null;
+    private String zycj = null;
+    private String zymc = null;
+    private String zyhgx = null;
+
     public PrintHelp() {
         this.setTitle("Print Test");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setBounds((int) ((SystemProperties.SCREEN_WIDTH - 800) / 2), (int) ((SystemProperties.SCREEN_HEIGHT - 600) / 2), 800, 600);
         initLayout();
+    }
+
+    public void init(String zkzh, String xm, String xb, String syd, String sfzh, String ksh, String bkzy, String zycj,
+                     String zymc, String zyhgx) {
+        this.zkzh = zkzh;
+        this.xm = xm;
+        this.xb = xb;
+        this.syd = syd;
+        this.sfzh = sfzh;
+        this.ksh = ksh;
+        this.bkzy = bkzy;
+        this.zycj = zycj;
+        this.zymc = zymc;
+        this.zyhgx = zyhgx;
     }
 
     private void initLayout() {
@@ -340,7 +367,21 @@ public class PrintHelp extends JFrame
     }
 
     public static void main(String[] args) {
-        (new PrintHelp()).setVisible(true);
+        Book book = new Book();
+        PageFormat pf = new PageFormat();
+        pf.setOrientation(PageFormat.PORTRAIT);
+        Paper p = new Paper();
+        p.setSize(595, 842);// 纸张大小
+        p.setImageableArea(40, 20, 590, 840);// A4(595 X 842)设置打印区域，其实0，0应该是72，72，因为A4纸的默认X,Y边距是72
+        pf.setPaper(p);
+        PrintHelp printHelp = new PrintHelp();
+        printHelp.init("0001", "孙彬焱", "男", "四川省", "511082199310101234", "sby001", "艺术设计", "300", "20", "260");
+        book.append(printHelp, pf);
+        PrinterJob job = PrinterJob.getPrinterJob();
+        job.setPageable(book);
+
+//            job.print();
+        printHelp.setVisible(true); // 预览
     }
 }
 
