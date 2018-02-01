@@ -1,6 +1,4 @@
-package PrintSrc.com.szallcom.tools;
-
-import PrintSrc.wf.common.SystemProperties;
+package PrintSrc;
 
 import java.awt.BasicStroke;
 import java.awt.BorderLayout;
