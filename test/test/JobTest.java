@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import org.junit.Test;
 
@@ -168,10 +169,14 @@ public class JobTest extends TestCase {
         System.out.println(sql);
     }
 
-    public void testDate() throws Exception {
-        Date d = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy");
-        System.out.println(format.format(d));
+    public void testRandomStr() throws Exception {
+        String sources = "0123456789"; // 加上一些字母，就可以生成pc站的验证码了
+        Random rand = new Random();
+        StringBuffer flag = new StringBuffer();
+        for (int j = 0; j < 6; j++) {
+            flag.append(sources.charAt(rand.nextInt(9)) + "");
+        }
+        System.out.println(flag.toString());
     }
 
 }

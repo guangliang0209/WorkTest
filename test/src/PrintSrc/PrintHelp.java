@@ -170,7 +170,7 @@ public class PrintHelp extends JFrame
                 int tempHeight = (int) (fontHeigth1 * 2 + 50);
                 String zkzh = "准考证号：sby001";
                 g2.drawString(zkzh, (int) x + 80, (int) y + fontHeigth2 + 10 + tempHeight);
-                String xm = "姓    名：孙彬焱";
+                String xm = "姓    名：孙某某";
                 g2.drawString(xm, (int) x + 80, (int) y + fontHeigth2 * 2 + 15 + tempHeight);
                 String xb = "性    别 ：男";
                 g2.drawString(xb, (int) x + 80, (int) y + fontHeigth2 * 3 + 20 + tempHeight);
