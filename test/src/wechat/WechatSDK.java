@@ -3,8 +3,6 @@ package wechat;
 import wechat.model.AccessToken;
 import wechat.service.impl.TokenServiceImpl;
 
-import java.io.IOException;
-
 /**
  * Created by fengguangliang on 2017/4/25.
  */
