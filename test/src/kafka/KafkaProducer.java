@@ -1,45 +1,55 @@
 package kafka;
 
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
-import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
-import kafka.serializer.StringEncoder;
+
+import java.util.Properties;
 
 public class KafkaProducer extends Thread {
-    private String topic;
+    private final kafka.javaapi.producer.Producer<Integer, String> producer;
 
+    private final String topic;
+
+    private final Properties props = new Properties();
+
+
+    /** @noinspection deprecation*/
     public KafkaProducer(String topic) {
-        super();
+        props.put("serializer.class", "kafka.serializer.StringEncoder");
+
+        props.put("metadata.broker.list", "127.0.0.1:9092");
+
+        producer = new kafka.javaapi.producer.Producer<>(new ProducerConfig(props));
+
         this.topic = topic;
     }
 
-    public static void main(String[] args) {
-        new KafkaProducer("mytopic").start();
-    }
 
+    /** @noinspection deprecation*/
     @Override
     public void run() {
-        Producer producer = createProducer();
-        int i = 0;
+        int messageNo = 1;
         while (true) {
-            producer.send(new KeyedMessage<Integer, String>(topic, "message:" + i++));
-            System.out.println("发送成功！");
-            try {
-                TimeUnit.SECONDS.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 
-    private Producer createProducer() {
-        Properties properties = new Properties();
-        properties.put("zk.connect", "localhost:2181");
-        properties.put("serializer.class", StringEncoder.class.getName());
-        properties.put("metadata.broker.list", "localhost:9092");
-        return new Producer<Integer, String>(new ProducerConfig(properties));
+            String messageStr = new String("Message_" + messageNo);
+
+            System.out.println("Send:" + messageStr);
+
+            producer.send(new KeyedMessage<>(topic, messageStr));
+
+            messageNo++;
+
+            try {
+
+                sleep(3000);
+
+            } catch (InterruptedException e) {
+
+                e.printStackTrace();
+
+            }
+
+        }
+
     }
 }

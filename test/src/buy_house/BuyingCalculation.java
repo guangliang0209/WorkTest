@@ -1,8 +1,8 @@
 package buy_house;
 
+import cn.hutool.core.util.StrUtil;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.parser.PdfTextExtractor;
-import com.xiaoleilu.hutool.util.StrUtil;
 
 import java.io.File;
 import java.io.IOException;
