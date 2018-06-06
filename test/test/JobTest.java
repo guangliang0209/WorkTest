@@ -1,5 +1,7 @@
 import PrintSrc.PrintHelp;
 import buy_house.BuyingCalculation;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import junit.framework.TestCase;
 import mail.Mail;
 
@@ -178,5 +180,25 @@ public class JobTest extends TestCase {
         }
         System.out.println(flag.toString());
     }
+
+    @Test
+    public void test3() throws Exception {
+        String title = "邮件标题";
+        String content = "邮件内容";
+        List<String> list = new ArrayList<>();
+        list.add("7020160452");
+        boolean sendByEmail = true;
+        boolean sendByWechat = false;
+        boolean sendBySms = false;
+        JSONObject object = new JSONObject();
+        object.put("title", title);
+        object.put("content", content);
+        object.put("users", list);
+        object.put("sendByEmail", sendByEmail);
+        object.put("sendByWechat", sendByWechat);
+        object.put("sendBySms", sendBySms);
+        UmpUtils.doPost("http://192.168.3.17:8080/mht_ump/a/ump/sendMessage/send", object.toJSONString());
+    }
+
 
 }
